@@ -18,15 +18,14 @@ export const metadata: Metadata = {
 };
 
 import { ReactNode } from "react";
+import Navbar from "@/components/navbar";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
     return (
         <html lang="en">
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                <>
-                    <nav>NAV BAR</nav>
-                    {children}
-                </>
+                <Navbar />
+                {children}
             </body>
         </html>
     );
