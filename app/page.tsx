@@ -1,12 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import MainLayout from "@/components/main-layout";
 
 export default function Home() {
     return (
-        <div>
-            <h1 className="text-blue-500">I'm HEADER!</h1>
-            <Image src="/icons/facebook-icon.png" width={500} height={500} alt="facebook-icon" />
-            <Link href={`/gaming`}>Gaming Page Link</Link>
-        </div>
+        <MainLayout
+            leftSidebar={<div className="p-4 ">LEFT: Friends, Groups, Shortcuts</div>}
+            rightSidebar={<div className="p-4">RIGHT: Birthdays, Contacts, Sponsored</div>}
+        >
+            <div className="p-4">
+                <h1>Main Feed</h1>
+                <p>Dynamic posts go here...</p>
+            </div>
+        </MainLayout>
     );
 }
