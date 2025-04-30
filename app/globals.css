@@ -1,11 +1,13 @@
 @import "tailwindcss";
-@import "tailwindcss/preflight";
 @tailwind utilities;
 
 :root {
+    --font-fb: "Segoe UI", Helvetica, Arial, sans-serif;
+
     --background: #ffffff;
     --foreground: #171717;
     --web-wash: #f2f4f7;
+    --primary-text: #080809;
 }
 
 @theme inline {
@@ -23,5 +25,7 @@
 }
 
 body {
+    font-family: var(--font-fb);
+    font-size: 15px;
     background-color: var(--web-wash);
 }
