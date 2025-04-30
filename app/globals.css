@@ -8,6 +8,7 @@
     --foreground: #171717;
     --web-wash: #f2f4f7;
     --primary-text: #080809;
+    --secondary-text: #65686c;
 }
 
 @theme inline {
