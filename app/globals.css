@@ -30,3 +30,9 @@ body {
     font-size: 15px;
     background-color: var(--web-wash);
 }
+
+.label-text {
+    color: var(--secondary-text);
+    font-weight: 500;
+    line-height: 1.3333;
+}

@@ -3,8 +3,12 @@ import React from "react";
 
 const PostActionButton = () => {
     return (
-        <div>
-            <LikeIcon />
+        <div className="bg-white rounded-[8px] flex items-center justify-center label-text px-3" style={{ width: "clamp(160px, 16.875vw, 216px)" }}>
+            <div className="px-1 py-[6px]">
+                <LikeIcon />
+            </div>
+
+            <span className="px-1 py-[6px]">Like</span>
         </div>
     );
 };
