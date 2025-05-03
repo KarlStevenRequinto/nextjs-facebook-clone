@@ -1,27 +1,23 @@
+import { on } from "events";
 import React from "react";
 
 interface ActionIconsProps {
-    isForIcon: boolean;
     icon?: React.ReactNode;
     iconHeight?: number;
     iconWidth?: number;
-    imageSrc?: string;
-    imageAlt?: string;
-    imageHeight?: number;
-    imageWidth?: number;
+    onClickIcon: () => void;
 }
 
-const ActionIcons = ({
-    isForIcon,
-    icon,
-    iconHeight = 20,
-    iconWidth = 20,
-    imageSrc,
-    imageAlt = "profile picture or icon",
-    imageHeight = 40,
-    imageWidth = 40,
-}: ActionIconsProps) => {
-    return <div>ActionIcons</div>;
+const ActionIcons = ({ icon, iconHeight, iconWidth, onClickIcon }: ActionIconsProps) => {
+    return (
+        <div
+            style={{ height: iconHeight, width: iconWidth }}
+            className={`flex items-center justify-center rounded-full bg-[#E2E5E9] hover:bg-[#d9dcdf] transition-colors duration-200 cursor-pointer`}
+            onClick={onClickIcon}
+        >
+            {icon}
+        </div>
+    );
 };
 
 export default ActionIcons;

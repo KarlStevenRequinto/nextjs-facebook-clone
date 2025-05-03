@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { use } from "react";
 import Image from "next/image";
 import SearchIcon from "@/public/svg/search-icon";
 import NavigationButton from "@/components/sub-components/navigation-button";
@@ -43,12 +45,28 @@ const Navbar = () => {
             {/* Right - Menus + Profile */}
             <div className="flex items-center gap-2">
                 <div className="flex items-center">
-                    {/* <ActionIcons /> */}
-                    <MenuIcon />
-                    <MessengerIcon />
-                    <NotificationIcon />
+                    <ActionIcons
+                        icon={<MenuIcon width="20" height="20" fillColor="var(--primary-black)" />}
+                        iconHeight={40}
+                        iconWidth={40}
+                        onClickIcon={() => console.log("Menu Icon Clicked")}
+                    />
+                    <ActionIcons
+                        icon={<MessengerIcon width="20" height="20" fillColor="var(--primary-black)" />}
+                        iconHeight={40}
+                        iconWidth={40}
+                        onClickIcon={() => console.log("Messenger Icon Clicked")}
+                    />
+                    <ActionIcons
+                        icon={<NotificationIcon width="20" height="20" fillColor="var(--primary-black)" />}
+                        iconHeight={40}
+                        iconWidth={40}
+                        onClickIcon={() => console.log("Notification Icon Clicked")}
+                    />
                 </div>
-                <div>profile pic</div>
+                <div className="w-[40px] h-[40px] rounded-full bg-[#E2E5E9] hover:bg-[#d9dcdf] transition-colors duration-200 cursor-pointer overflow-hidden relative">
+                    <Image src={"/images/profile-pic.jpg"} alt="profile picture" fill className="object-cover" />
+                </div>
             </div>
         </nav>
     );
