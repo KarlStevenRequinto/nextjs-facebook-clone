@@ -1,12 +1,33 @@
 import React from "react";
-
+import Image from "next/image";
+import SearchIcon from "@/public/svg/search-icon";
 const Navbar = () => {
     return (
         <nav className="h-[56px] bg-white sticky top-0 z-50 flex items-center justify-between px-4 shadow">
             {/* Left - Icon + Searchbar */}
             <div className="flex items-center gap-2">
-                <div>icon</div>
-                <div>searchbar</div>
+                <div>
+                    <Image src="/icons/facebook-icon.png" alt="facebook icon" height={40} width={40} className="object-cover" />
+                </div>
+
+                <div className="hidden xl:flex items-center bg-[color:var(--comment-background)] text-white rounded-full w-[240px] h-[40px]">
+                    <span className="pl-3">
+                        <SearchIcon fillColor="var(--secondary-text)" width="16" height="16" />
+                    </span>
+
+                    <input
+                        type="text"
+                        placeholder="Search Facebook"
+                        className="bg-transparent outline-non placeholder:text-[color:var(--secondary-text)] placeholder:text-md pt-[7px] px-[8px] pb-[9px] w-[212px] h-full"
+                    />
+                </div>
+
+                {/* Circle Search Icon: shown on <1280px */}
+                <div className="xl:hidden w-10 h-10 bg-[color:var(--comment-background)] rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path d="M21 21l-4.35-4.35M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" />
+                    </svg>
+                </div>
             </div>
 
             {/* Center - Nav Buttons */}
