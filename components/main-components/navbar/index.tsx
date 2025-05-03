@@ -1,6 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import SearchIcon from "@/public/svg/search-icon";
+import NavigationButton from "@/components/sub-components/navigation-button";
+import ActionIcons from "@/components/sub-components/action-icons";
+import MenuIcon from "@/public/svg/menu-icon";
+import MessengerIcon from "@/public/svg/messenger-icon";
+import NotificationIcon from "@/public/svg/notification-icon";
 const Navbar = () => {
     return (
         <nav className="h-[56px] bg-white sticky top-0 z-50 flex items-center justify-between px-4 shadow">
@@ -31,11 +36,18 @@ const Navbar = () => {
             </div>
 
             {/* Center - Nav Buttons */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 flex gap-4">nav buttons</div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 flex gap-4">
+                <NavigationButton />
+            </div>
 
             {/* Right - Menus + Profile */}
             <div className="flex items-center gap-2">
-                <div>menus</div>
+                <div className="flex items-center">
+                    {/* <ActionIcons /> */}
+                    <MenuIcon />
+                    <MessengerIcon />
+                    <NotificationIcon />
+                </div>
                 <div>profile pic</div>
             </div>
         </nav>

@@ -15,7 +15,7 @@ const SideBarItem = ({ altText, imageSrc, imageWidth, imageHeight, label }: Side
             <div className="my-2 mr-3">
                 <Image src={imageSrc} alt={altText} width={imageWidth} height={imageHeight} className="object-cover" />
             </div>
-            <div className="w-[223px] text-[color:var(--primary-text)] font-medium leading-[1.3333]">{label}</div>
+            <div className="w-[223px] text-[color:var(--primary-black)] font-medium leading-[1.3333]">{label}</div>
         </div>
     );
 };
