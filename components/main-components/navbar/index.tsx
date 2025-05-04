@@ -66,12 +66,16 @@ const Navbar = () => {
                         onClickIcon={() => console.log("Notification Icon Clicked")}
                     />
                 </div>
-                <div className="w-[40px] h-[40px] rounded-full bg-[#E2E5E9] hover:bg-[#d9dcdf] transition-colors duration-200 cursor-pointer relative">
+                <div className="group w-[40px] h-[40px] rounded-full border border-[#cec8c4ab] bg-[#E2E5E9] transition-colors duration-200 cursor-pointer relative">
+                    {/* Profile Image */}
                     <Image src="/images/profile-pic.jpg" alt="profile picture" fill className="object-cover rounded-full" />
 
-                    {/* Small circle icon inside the avatar bounds */}
+                    {/* Overlay that dims on hover */}
+                    <div className="absolute inset-0 bg-black/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+
+                    {/* Dropdown circle */}
                     <div className="absolute bottom-[-1px] right-[-1px] w-[14px] h-[14px] rounded-full bg-white border border-white flex items-center justify-center">
-                        <div className="w-[10px] h-[10px] rounded-full bg-[color:var(--secondary-background)]">
+                        <div className="w-[10px] h-[10px] rounded-full bg-[color:var(--secondary-background)] flex items-center justify-center">
                             <DropDownIcon width="12" height="12" fillColor="var(--primary-black)" />
                         </div>
                     </div>
