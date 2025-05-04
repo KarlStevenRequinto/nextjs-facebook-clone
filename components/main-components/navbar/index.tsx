@@ -42,11 +42,15 @@ const Navbar = () => {
             {/* Center - Nav Buttons */}
             <div className="absolute left-1/2 transform -translate-x-1/2 flex gap-4">
                 <NavigationButton />
+                <NavigationButton />
+                <NavigationButton />
+                <NavigationButton />
+                <NavigationButton />
             </div>
 
             {/* Right - Menus + Profile */}
             <div className="flex items-center gap-2">
-                <div className="flex items-center">
+                <div className="flex items-center gap-2">
                     <ActionIcons
                         icon={<MenuIcon width="20" height="20" fillColor="var(--primary-black)" />}
                         iconHeight={40}
@@ -74,8 +78,8 @@ const Navbar = () => {
                     <div className="absolute inset-0 bg-black/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
 
                     {/* Dropdown circle */}
-                    <div className="absolute bottom-[-1px] right-[-1px] w-[14px] h-[14px] rounded-full bg-white border border-white flex items-center justify-center">
-                        <div className="w-[10px] h-[10px] rounded-full bg-[color:var(--secondary-background)] flex items-center justify-center">
+                    <div className="absolute bottom-[-1px] right-[-1px] w-[16px] h-[16px] rounded-full bg-white border border-white flex items-center justify-center">
+                        <div className="rounded-full bg-[color:var(--secondary-background)] flex items-center justify-center">
                             <DropDownIcon width="12" height="12" fillColor="var(--primary-black)" />
                         </div>
                     </div>
