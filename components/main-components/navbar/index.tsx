@@ -8,6 +8,8 @@ import ActionIcons from "@/components/sub-components/action-icons";
 import MenuIcon from "@/public/svg/menu-icon";
 import MessengerIcon from "@/public/svg/messenger-icon";
 import NotificationIcon from "@/public/svg/notification-icon";
+import DropDownIcon from "@/public/svg/drop-down-icon";
+
 const Navbar = () => {
     return (
         <nav className="h-[56px] bg-white sticky top-0 z-50 flex items-center justify-between px-4 shadow">
@@ -64,8 +66,15 @@ const Navbar = () => {
                         onClickIcon={() => console.log("Notification Icon Clicked")}
                     />
                 </div>
-                <div className="w-[40px] h-[40px] rounded-full bg-[#E2E5E9] hover:bg-[#d9dcdf] transition-colors duration-200 cursor-pointer overflow-hidden relative">
-                    <Image src={"/images/profile-pic.jpg"} alt="profile picture" fill className="object-cover" />
+                <div className="w-[40px] h-[40px] rounded-full bg-[#E2E5E9] hover:bg-[#d9dcdf] transition-colors duration-200 cursor-pointer relative">
+                    <Image src="/images/profile-pic.jpg" alt="profile picture" fill className="object-cover rounded-full" />
+
+                    {/* Small circle icon inside the avatar bounds */}
+                    <div className="absolute bottom-[-1px] right-[-1px] w-[14px] h-[14px] rounded-full bg-white border border-white flex items-center justify-center">
+                        <div className="w-[10px] h-[10px] rounded-full bg-[color:var(--secondary-background)]">
+                            <DropDownIcon width="12" height="12" fillColor="var(--primary-black)" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
