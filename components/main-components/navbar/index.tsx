@@ -11,8 +11,21 @@ import NotificationIcon from "@/public/svg/notification-icon";
 import DropDownIcon from "@/public/svg/drop-down-icon";
 import HomeIcon from "@/public/svg/home-icon";
 import VideoIcon from "@/public/svg/video-icon";
+import MarketplaceIcon from "@/public/svg/marketplace-icon";
+import GroupsIcon from "@/public/svg/groups";
+import GamingIcon from "@/public/svg/gaming-icon";
+import { useState } from "react";
+
+const navItems = [
+    { icon: <HomeIcon width="24" height="24" fillColor="var(--secondary-text)" />, name: "home" },
+    { icon: <VideoIcon width="24" height="24" fillColor="var(--secondary-text)" />, name: "video" },
+    { icon: <MarketplaceIcon width="24" height="24" fillColor="var(--secondary-text)" />, name: "marketplace" },
+    { icon: <GroupsIcon width="24" height="24" fillColor="var(--secondary-text)" />, name: "groups" },
+    { icon: <GamingIcon width="24" height="24" fillColor="var(--secondary-text)" />, name: "gaming" },
+];
 
 const Navbar = () => {
+    const [activeTab, setActiveTab] = useState("home");
     return (
         <nav className="h-[56px] bg-white sticky top-0 z-50 flex items-center justify-between px-4 shadow">
             {/* Left - Icon + Searchbar */}
@@ -43,11 +56,9 @@ const Navbar = () => {
 
             {/* Center - Nav Buttons */}
             <div className="absolute left-1/2 transform -translate-x-1/2 flex gap-4">
-                <NavigationButton icon={<HomeIcon width="24" height="24" fillColor="var(--secondary-text)" />} />
-                <NavigationButton icon={<VideoIcon width="24" height="24" fillColor="var(--secondary-text)" />} />
-                <NavigationButton />
-                <NavigationButton />
-                <NavigationButton />
+                {navItems.map((item, index) => (
+                    <NavigationButton key={index} icon={item.icon} />
+                ))}
             </div>
 
             {/* Right - Menus + Profile */}
