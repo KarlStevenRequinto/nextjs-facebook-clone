@@ -9,6 +9,8 @@ import MenuIcon from "@/public/svg/menu-icon";
 import MessengerIcon from "@/public/svg/messenger-icon";
 import NotificationIcon from "@/public/svg/notification-icon";
 import DropDownIcon from "@/public/svg/drop-down-icon";
+import HomeIcon from "@/public/svg/home-icon";
+import VideoIcon from "@/public/svg/video-icon";
 
 const Navbar = () => {
     return (
@@ -41,8 +43,8 @@ const Navbar = () => {
 
             {/* Center - Nav Buttons */}
             <div className="absolute left-1/2 transform -translate-x-1/2 flex gap-4">
-                <NavigationButton />
-                <NavigationButton />
+                <NavigationButton icon={<HomeIcon width="24" height="24" fillColor="var(--secondary-text)" />} />
+                <NavigationButton icon={<VideoIcon width="24" height="24" fillColor="var(--secondary-text)" />} />
                 <NavigationButton />
                 <NavigationButton />
                 <NavigationButton />
