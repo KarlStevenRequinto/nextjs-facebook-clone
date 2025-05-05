@@ -1,13 +1,13 @@
 import React from "react";
 
 interface GamingIconProps {
-    fillColor: string;
     width: string;
     height: string;
     isActive?: boolean;
 }
 
-const GamingIcon = ({ fillColor, width, height, isActive }: GamingIconProps) => {
+const GamingIcon = ({ width, height, isActive }: GamingIconProps) => {
+    const fillColor = isActive ? "var(--primary-button-background)" : "var(--secondary-text)";
     if (isActive)
         return (
             <svg viewBox="0 0 24 24" width={width} height={height} fill={fillColor}>

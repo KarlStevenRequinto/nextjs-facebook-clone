@@ -1,13 +1,13 @@
 import React from "react";
 
 interface VideoIconProps {
-    fillColor: string;
     width: string;
     height: string;
     isActive?: boolean;
 }
 
-const VideoIcon = ({ fillColor, width, height, isActive }: VideoIconProps) => {
+const VideoIcon = ({ width, height, isActive }: VideoIconProps) => {
+    const fillColor = isActive ? "var(--primary-button-background)" : "var(--secondary-text)";
     if (isActive)
         return (
             <svg viewBox="0 0 24 24" width={width} height={height} fill={fillColor}>

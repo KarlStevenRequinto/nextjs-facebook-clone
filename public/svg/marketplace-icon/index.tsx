@@ -1,13 +1,13 @@
 import React from "react";
 
 interface MarketplaceIconProps {
-    fillColor: string;
     width: string;
     height: string;
     isActive?: boolean;
 }
 
-const MarketplaceIcon = ({ fillColor, width, height, isActive }: MarketplaceIconProps) => {
+const MarketplaceIcon = ({ width, height, isActive }: MarketplaceIconProps) => {
+    const fillColor = isActive ? "var(--primary-button-background)" : "var(--secondary-text)";
     if (isActive)
         return (
             <svg viewBox="0 0 24 24" width={width} height={height} fill={fillColor}>

@@ -1,13 +1,12 @@
 import React from "react";
-
 interface GroupsIconProps {
-    fillColor: string;
     width: string;
     height: string;
     isActive?: boolean;
 }
 
-const GroupsIcon = ({ fillColor, width, height, isActive }: GroupsIconProps) => {
+const GroupsIcon = ({ width, height, isActive }: GroupsIconProps) => {
+    const fillColor = isActive ? "var(--primary-button-background)" : "var(--secondary-text)";
     if (isActive)
         return (
             <svg viewBox="0 0 24 24" width={width} height={height} fill={fillColor}>

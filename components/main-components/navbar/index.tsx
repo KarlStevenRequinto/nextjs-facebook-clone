@@ -16,16 +16,20 @@ import GroupsIcon from "@/public/svg/groups";
 import GamingIcon from "@/public/svg/gaming-icon";
 import { useState } from "react";
 
-const navItems = [
-    { icon: <HomeIcon width="24" height="24" fillColor="var(--secondary-text)" />, name: "home" },
-    { icon: <VideoIcon width="24" height="24" fillColor="var(--secondary-text)" />, name: "video" },
-    { icon: <MarketplaceIcon width="24" height="24" fillColor="var(--secondary-text)" />, name: "marketplace" },
-    { icon: <GroupsIcon width="24" height="24" fillColor="var(--secondary-text)" />, name: "groups" },
-    { icon: <GamingIcon width="24" height="24" fillColor="var(--secondary-text)" />, name: "gaming" },
-];
-
 const Navbar = () => {
     const [activeTab, setActiveTab] = useState("home");
+
+    const navItems = [
+        { icon: <HomeIcon width="24" height="24" isActive={activeTab === "home"} />, name: "home" },
+        { icon: <VideoIcon width="24" height="24" isActive={activeTab === "video"} />, name: "video" },
+        {
+            icon: <MarketplaceIcon width="24" height="24" isActive={activeTab === "marketplace"} />,
+            name: "marketplace",
+        },
+        { icon: <GroupsIcon width="24" height="24" isActive={activeTab === "groups"} />, name: "groups" },
+        { icon: <GamingIcon width="24" height="24" isActive={activeTab === "gaming"} />, name: "gaming" },
+    ];
+
     return (
         <nav className="h-[56px] bg-white sticky top-0 z-50 flex items-center justify-between px-4 shadow">
             {/* Left - Icon + Searchbar */}
@@ -57,7 +61,14 @@ const Navbar = () => {
             {/* Center - Nav Buttons */}
             <div className="absolute left-1/2 transform -translate-x-1/2 flex gap-4">
                 {navItems.map((item, index) => (
-                    <NavigationButton key={index} icon={item.icon} />
+                    <NavigationButton
+                        key={index}
+                        icon={item.icon}
+                        onClickBtn={() => {
+                            console.log("NavigationButton: ", item.name);
+                            setActiveTab(item.name);
+                        }}
+                    />
                 ))}
             </div>
 

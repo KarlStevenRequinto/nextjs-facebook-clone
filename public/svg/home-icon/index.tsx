@@ -1,14 +1,13 @@
 import React from "react";
 
 interface HomeIconProps {
-    fillColor?: string;
     width: string;
     height: string;
-    iconStyle?: React.CSSProperties;
     isActive?: boolean;
 }
 
-const HomeIcon = ({ width, height, fillColor, isActive }: HomeIconProps) => {
+const HomeIcon = ({ width, height, isActive }: HomeIconProps) => {
+    const fillColor = isActive ? "var(--primary-button-background)" : "var(--secondary-text)";
     if (isActive) {
         return (
             <svg viewBox="0 0 24 24" width={width} height={height} fill={fillColor}>
