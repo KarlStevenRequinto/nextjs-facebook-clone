@@ -19,7 +19,6 @@ import WatchRightSideBar from "@/app/(pages)/watch/_components/RightSideBar";
 const MainLayout = ({ children }: { children: ReactNode }) => {
     const pathname = usePathname();
     const isProfilePage = /^\/[^\/]+$/.test(pathname) && !["/login", "/groups", "/gaming", "/marketplace", "/watch"].includes(pathname);
-    console.log("pathname", pathname);
     const leftSidebar = () => {
         if (isProfilePage) {
             return <ProfileLeftSideBar />;

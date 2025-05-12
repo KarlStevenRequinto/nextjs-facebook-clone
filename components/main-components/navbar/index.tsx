@@ -12,7 +12,7 @@ import DropDownIcon from "@/public/svg/drop-down-icon";
 import HomeIcon from "@/public/svg/home-icon";
 import VideoIcon from "@/public/svg/video-icon";
 import MarketplaceIcon from "@/public/svg/marketplace-icon";
-import GroupsIcon from "@/public/svg/groups";
+import GroupsIcon from "@/public/svg/groups-icon";
 import GamingIcon from "@/public/svg/gaming-icon";
 import { useState } from "react";
 
@@ -64,6 +64,7 @@ const Navbar = () => {
                     <NavigationButton
                         key={index}
                         icon={item.icon}
+                        isActive={activeTab === item.name}
                         onClickBtn={() => {
                             console.log("NavigationButton: ", item.name);
                             setActiveTab(item.name);
