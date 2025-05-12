@@ -1,7 +1,8 @@
 "use client";
 
-import React, { use } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import SearchIcon from "@/public/svg/search-icon";
 import NavigationButton from "@/components/sub-components/navigation-button";
 import ActionIcons from "@/components/sub-components/action-icons";
@@ -14,14 +15,13 @@ import VideoIcon from "@/public/svg/video-icon";
 import MarketplaceIcon from "@/public/svg/marketplace-icon";
 import GroupsIcon from "@/public/svg/groups-icon";
 import GamingIcon from "@/public/svg/gaming-icon";
-import { useState } from "react";
 
 const Navbar = () => {
     const [activeTab, setActiveTab] = useState("home");
 
     const navItems = [
         { icon: <HomeIcon width="24" height="24" isActive={activeTab === "home"} />, name: "home" },
-        { icon: <VideoIcon width="24" height="24" isActive={activeTab === "video"} />, name: "video" },
+        { icon: <VideoIcon width="24" height="24" isActive={activeTab === "watch"} />, name: "watch" },
         {
             icon: <MarketplaceIcon width="24" height="24" isActive={activeTab === "marketplace"} />,
             name: "marketplace",
@@ -61,15 +61,16 @@ const Navbar = () => {
             {/* Center - Nav Buttons */}
             <div className="absolute left-1/2 transform -translate-x-1/2 flex gap-4">
                 {navItems.map((item, index) => (
-                    <NavigationButton
-                        key={index}
-                        icon={item.icon}
-                        isActive={activeTab === item.name}
-                        onClickBtn={() => {
-                            console.log("NavigationButton: ", item.name);
-                            setActiveTab(item.name);
-                        }}
-                    />
+                    <Link key={index} href={`/${item.name}`} passHref>
+                        <NavigationButton
+                            icon={item.icon}
+                            isActive={activeTab === item.name}
+                            onClickBtn={() => {
+                                console.log("NavigationButton: ", item.name);
+                                setActiveTab(item.name);
+                            }}
+                        />
+                    </Link>
                 ))}
             </div>
 
