@@ -17,10 +17,10 @@ import GroupsIcon from "@/public/svg/groups-icon";
 import GamingIcon from "@/public/svg/gaming-icon";
 
 const Navbar = () => {
-    const [activeTab, setActiveTab] = useState("home");
+    const [activeTab, setActiveTab] = useState("/");
 
     const navItems = [
-        { icon: <HomeIcon width="24" height="24" isActive={activeTab === "home"} />, name: "home" },
+        { icon: <HomeIcon width="24" height="24" isActive={activeTab === "/"} />, name: "/" },
         { icon: <VideoIcon width="24" height="24" isActive={activeTab === "watch"} />, name: "watch" },
         {
             icon: <MarketplaceIcon width="24" height="24" isActive={activeTab === "marketplace"} />,
