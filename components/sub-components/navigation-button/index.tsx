@@ -39,14 +39,14 @@ const NavigationButton = ({ icon, onClickBtn, isActive = false, tooltipText = "T
                 {icon}
             </div>
             <div
-                className={`absolute top-full mt-[-1px] transition-opacity duration-300 pointer-events-none ${
+                className={`absolute top-[calc(100%+8px)] transition-opacity duration-300 pointer-events-none ${
                     showTooltip ? "opacity-100" : "opacity-0"
                 }`}
             >
                 <Tooltip text={tooltipText} />
             </div>
             <div
-                className={`absolute bottom-0 left-0 right-0 h-[3px] bg-[color:var(--primary-button-background)] rounded-t-[1px] transform transition-transform duration-300 ease-out ${
+                className={`absolute bottom-0 left-1/2 translate-x-[-50%] w-[90%] h-[3px] bg-[color:var(--primary-button-background)] rounded-t-[1px] transform transition-transform duration-300 ease-out ${
                     isActive ? "scale-y-100" : "scale-y-0"
                 } origin-bottom`}
             />

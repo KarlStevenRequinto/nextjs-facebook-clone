@@ -20,14 +20,15 @@ const Navbar = () => {
     const [activeTab, setActiveTab] = useState("/");
 
     const navItems = [
-        { icon: <HomeIcon width="24" height="24" isActive={activeTab === "/"} />, name: "/" },
-        { icon: <VideoIcon width="24" height="24" isActive={activeTab === "watch"} />, name: "watch" },
+        { icon: <HomeIcon width="24" height="24" isActive={activeTab === "/"} />, name: "home", routeName: "/" },
+        { icon: <VideoIcon width="24" height="24" isActive={activeTab === "watch"} />, name: "video", routeName: "watch" },
         {
             icon: <MarketplaceIcon width="24" height="24" isActive={activeTab === "marketplace"} />,
             name: "marketplace",
+            routeName: "marketplace",
         },
-        { icon: <GroupsIcon width="24" height="24" isActive={activeTab === "groups"} />, name: "groups" },
-        { icon: <GamingIcon width="24" height="24" isActive={activeTab === "gaming"} />, name: "gaming" },
+        { icon: <GroupsIcon width="24" height="24" isActive={activeTab === "groups"} />, name: "groups", routeName: "groups" },
+        { icon: <GamingIcon width="24" height="24" isActive={activeTab === "gaming"} />, name: "gaming", routeName: "gaming" },
     ];
 
     return (
@@ -61,14 +62,14 @@ const Navbar = () => {
             {/* Center - Nav Buttons */}
             <div className="absolute left-1/2 transform -translate-x-1/2 flex gap-4">
                 {navItems.map((item, index) => (
-                    <Link key={index} href={`/${item.name}`} passHref>
+                    <Link key={index} href={`/${item.routeName}`} passHref>
                         <NavigationButton
                             icon={item.icon}
                             isActive={activeTab === item.name}
                             onClickBtn={() => {
-                                console.log("NavigationButton: ", item.name);
                                 setActiveTab(item.name);
                             }}
+                            tooltipText={item.name}
                         />
                     </Link>
                 ))}
