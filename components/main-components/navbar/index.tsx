@@ -192,6 +192,13 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
+
+                    <div>
+                        <span>Recent</span>
+                        <span>Edit</span>
+                    </div>
+
+                    <div>list of recent searches</div>
                 </div>
             )}
         </>

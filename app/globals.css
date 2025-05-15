@@ -32,6 +32,7 @@
 
 body {
     font-family: var(--font-fb);
+    color: (var(--primary-black));
     font-size: 15px;
     background-color: var(--web-wash);
 }
