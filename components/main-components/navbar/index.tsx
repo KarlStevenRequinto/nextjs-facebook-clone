@@ -16,6 +16,7 @@ import MarketplaceIcon from "@/public/svg/marketplace-icon";
 import GroupsIcon from "@/public/svg/groups-icon";
 import GamingIcon from "@/public/svg/gaming-icon";
 import ArrowLeftIcon from "@/public/svg/arrow-left-icon";
+import SearchItem from "@/components/sub-components/search-item";
 
 const Navbar = () => {
     const [activeTab, setActiveTab] = useState("/");
@@ -61,7 +62,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="h-[56px] bg-white sticky top-0 z-50 flex items-center justify-between px-4 shadow">
+            <nav className="h-[56px] bg-white sticky top-0 z-90 flex items-center justify-between px-4 shadow">
                 {/* Left - Icon + Searchbar */}
                 <div className="flex items-center gap-2">
                     <div>
@@ -150,7 +151,7 @@ const Navbar = () => {
 
             {isSearchOpen && (
                 <div
-                    className={`absolute left-0 top-0 w-[320px] h-[500px] bg-white rounded-lg shadow-xl pl-2 pr-4 py-2 z-100 transform transition-transform duration-500 ease-in-out ${
+                    className={`absolute left-0 top-0 w-[320px] h-[500px] bg-white rounded-lg shadow-xl px-2 py-2 z-100 transform transition-transform duration-500 ease-in-out ${
                         isSearchOpen ? "translate-x-0 opacity-100" : "-translate-x-[50%] opacity-0 pointer-events-none"
                     }`}
                     ref={modalRef}
@@ -198,7 +199,9 @@ const Navbar = () => {
                         <span>Edit</span>
                     </div>
 
-                    <div>list of recent searches</div>
+                    <div>
+                        <SearchItem />
+                    </div>
                 </div>
             )}
         </>
