@@ -151,12 +151,12 @@ const Navbar = () => {
 
             {isSearchOpen && (
                 <div
-                    className={`absolute left-0 top-0 w-[320px] h-[500px] bg-white rounded-lg shadow-xl px-2 py-2 z-100 transform transition-transform duration-500 ease-in-out ${
+                    className={` absolute left-0 top-0 w-[320px] h-[500px] bg-white rounded-lg shadow-xl px-2 py-2 z-100 transform transition-transform duration-500 ease-in-out ${
                         isSearchOpen ? "translate-x-0 opacity-100" : "-translate-x-[50%] opacity-0 pointer-events-none"
                     }`}
                     ref={modalRef}
                 >
-                    <div className="relative flex items-center pl-2">
+                    <div className="relative flex items-center pl-2 ">
                         <div
                             className={`w-[36px] h-[36px] rounded-full flex items-center justify-center hover:bg-[color:var(--comment-background)] cursor-pointer z-10 transition-transform duration-500 ease-in-out ${
                                 isSearchBarExpanded ? "-translate-x-2" : "translate-x-0"
@@ -194,12 +194,16 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div>
-                        <span>Recent</span>
-                        <span>Edit</span>
+                    <div className="flex items-center justify-between leading-[1.1765] mt-2 mb-[7px] px-2 pt-1.5">
+                        <h2 className="cursor-pointer text-[17px] font-semibold mb-1 relative top-[1.2px]">
+                            <span>Recent</span>
+                        </h2>
+
+                        <span className="text-[color:var(--blue-text-color-100)] cursor-pointer">Edit</span>
                     </div>
 
                     <div>
+                        <SearchItem />
                         <SearchItem />
                     </div>
                 </div>

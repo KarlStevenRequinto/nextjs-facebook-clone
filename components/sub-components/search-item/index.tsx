@@ -5,7 +5,7 @@ import React from "react";
 
 const SearchItem = () => {
     return (
-        <div className="flex items-center justify-between bg-white rounded-lg px-3 py-2 hover:bg-[color:var(--comment-background)] transition-colors cursor-pointer w-full">
+        <div className="flex items-center justify-between bg-white rounded-lg py-1.5 pl-2 pr-[2px] hover:bg-[color:var(--comment-background)] transition-colors cursor-pointer w-full">
             {/* Left: Clock Icon */}
             <div className="w-[36px] h-[36px] bg-[color:var(--web-wash)] rounded-full flex items-center justify-center mr-3">
                 <ClockIcon width="20" height="20" fillColor="var(--secondary-text)" />
@@ -23,8 +23,11 @@ const SearchItem = () => {
             </div>
 
             {/* Right: Avatar + Close */}
-            <div className="flex items-center gap-2 ml-3">
-                <Image width={36} height={36} src="/images/gaming-video-icon.png" alt="avatar" />
+            <div className="flex items-center ml-3">
+                <div>
+                    <Image width={36} height={36} src="/images/gaming-video-icon.png" alt="avatar" />
+                </div>
+
                 <div className="w-[40px] h-[40px] p-[6px] group">
                     <div className="w-[28px] h-[28px] flex items-center justify-center rounded-full transition-colors duration-200 group-hover:bg-[color:var(--secondary-background)]">
                         <CloseIcon width="12" height="12" fillColor="var(--secondary-text)" />
