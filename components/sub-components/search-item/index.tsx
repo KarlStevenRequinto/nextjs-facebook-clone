@@ -16,7 +16,7 @@ const SearchItem = () => {
                 <span className="font-medium leading-[1.3333] text-ellipsis overflow-hidden whitespace-nowrap">Jed Vargas</span>
 
                 <span className="flex items-center">
-                    <span className="w-[8px] h-[8px] bg-blue-500 rounded-full mr-2"></span>
+                    <span className="w-[8px] h-[8px] bg-[color:var(--blue-100)] rounded-full mr-2"></span>
                     <span className="text-[13px] text-[color:var(--secondary-text)] leading-[1.2308]">9+&nbsp;</span>
                     <span className="text-[13px] text-[color:var(--secondary-text)] leading-[1.2308]">new friend</span>
                 </span>

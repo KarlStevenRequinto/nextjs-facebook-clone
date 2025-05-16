@@ -199,7 +199,7 @@ const Navbar = () => {
                             <span>Recent</span>
                         </h2>
 
-                        <span className="text-[color:var(--blue-text-color-100)] cursor-pointer">Edit</span>
+                        <span className="text-[color:var(--blue-100)] cursor-pointer">Edit</span>
                     </div>
 
                     <div>
