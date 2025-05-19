@@ -176,11 +176,13 @@ const Navbar = () => {
                             className={`absolute right-0 top-0 bg-[color:var(--comment-background)] text-white rounded-full h-[40px] transition-[width] duration-100 ease-in-out hidden xl:flex items-center`}
                             style={{ width: isSearchBarExpanded ? "252px" : "240px" }}
                         >
-                            {isSearchOpen && !isSearchFocused && (
-                                <span className="pl-3 absolute left-3 transition-opacity duration-200">
-                                    <SearchIcon fillColor="var(--secondary-text)" width="16" height="16" />
-                                </span>
-                            )}
+                            <span
+                                className={`absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-300 ease-in-out ${
+                                    isSearchFocused ? "opacity-0 -translate-x-2" : "opacity-100 translate-x-0"
+                                }`}
+                            >
+                                <SearchIcon fillColor="var(--secondary-text)" width="16" height="16" />
+                            </span>
 
                             <input
                                 type="text"
@@ -200,7 +202,7 @@ const Navbar = () => {
                                 className="bg-transparent outline-none border-none placeholder:text-[color:var(--secondary-text)] placeholder:text-md pt-[7px] pb-[9px] w-full h-full transition-[padding] duration-300"
                                 style={{
                                     color: "var(--primary-black)",
-                                    paddingLeft: isSearchBarExpanded ? "16px" : "8px",
+                                    paddingLeft: isSearchFocused ? "16px" : "36px",
                                     paddingRight: isSearchBarExpanded ? "16px" : "8px",
                                 }}
                             />
