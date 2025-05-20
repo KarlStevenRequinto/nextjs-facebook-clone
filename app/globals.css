@@ -5,8 +5,9 @@
     --font-fb: "Segoe UI", Helvetica, Arial, sans-serif;
 
     --background: #ffffff;
+    --background-100: #c6cace;
+    --background-200: #d9dcdf;
     --secondary-background: #e2e5e9;
-
     --foreground: #171717;
     --web-wash: #f2f4f7;
     --primary-black: #080809;
@@ -14,6 +15,7 @@
     --secondary-text: #65686c;
     --comment-background: #f0f2f5;
     --primary-button-background: #0866ff;
+    --secondary-button-background: #ebf5ff;
     --blue-100: #0064d1;
 }
 
