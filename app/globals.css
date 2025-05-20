@@ -17,6 +17,8 @@
     --primary-button-background: #0866ff;
     --secondary-button-background: #ebf5ff;
     --blue-100: #0064d1;
+    --blue-button-background-100: #e5ecf7;
+    --blue-button-background-200: #c6ceda;
 }
 
 @theme inline {
