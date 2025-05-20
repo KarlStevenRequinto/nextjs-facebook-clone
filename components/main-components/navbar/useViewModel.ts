@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 export const useViewModel = () => {
     const [activeTab, setActiveTab] = useState("/");
     const [isSearchOpen, setIsSearchOpen] = useState(false);
-    const [isButtonActive, setIsButtonActive] = useState(false);
+    const [activeIcon, setActiveIcon] = useState<string | null>(null);
     const [isSearchBarExpanded, setIsSearchBarExpanded] = useState(false);
     const [isSearchFocused, setIsSearchFocused] = useState(false);
     const [searchValue, setSearchValue] = useState("");
@@ -48,7 +48,7 @@ export const useViewModel = () => {
         searchRef,
         modalRef,
         modalInputRef,
-        isButtonActive,
-        setIsButtonActive,
+        activeIcon,
+        setActiveIcon,
     };
 };

@@ -32,8 +32,8 @@ const Navbar = () => {
         searchRef,
         modalRef,
         modalInputRef,
-        isButtonActive,
-        setIsButtonActive,
+        activeIcon,
+        setActiveIcon,
     } = useViewModel();
 
     const navItems = [
@@ -111,37 +111,39 @@ const Navbar = () => {
                                 <MenuIcon
                                     width="20"
                                     height="20"
-                                    fillColor={isButtonActive ? "var(--primary-button-background)" : "var(--primary-black)"}
+                                    fillColor={activeIcon === "menu" ? "var(--primary-button-background)" : "var(--primary-black)"}
                                 />
                             }
                             iconHeight={40}
                             iconWidth={40}
-                            isActive={isButtonActive}
-                            onClickIcon={() => setIsButtonActive(!isButtonActive)}
+                            isActive={activeIcon === "menu"}
+                            onClickIcon={() => setActiveIcon("menu")}
                         />
                         <ActionIcons
                             icon={
                                 <MessengerIcon
                                     width="20"
                                     height="20"
-                                    fillColor={isButtonActive ? "var(--primary-button-background)" : "var(--primary-black)"}
+                                    fillColor={activeIcon === "messenger" ? "var(--primary-button-background)" : "var(--primary-black)"}
                                 />
                             }
                             iconHeight={40}
                             iconWidth={40}
-                            onClickIcon={() => setIsButtonActive(!isButtonActive)}
+                            isActive={activeIcon === "messenger"}
+                            onClickIcon={() => setActiveIcon("messenger")}
                         />
                         <ActionIcons
                             icon={
                                 <NotificationIcon
                                     width="20"
                                     height="20"
-                                    fillColor={isButtonActive ? "var(--primary-button-background)" : "var(--primary-black)"}
+                                    fillColor={activeIcon === "notification" ? "var(--primary-button-background)" : "var(--primary-black)"}
                                 />
                             }
                             iconHeight={40}
                             iconWidth={40}
-                            onClickIcon={() => setIsButtonActive(!isButtonActive)}
+                            isActive={activeIcon === "notification"}
+                            onClickIcon={() => setActiveIcon("notification")}
                         />
                     </div>
                     <div className="group w-[40px] h-[40px] rounded-full border border-[#cec8c4ab] bg-[#E2E5E9] transition-colors duration-200 cursor-pointer relative">
