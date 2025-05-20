@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect, use } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import SearchIcon from "@/public/svg/search-icon";
@@ -17,16 +17,23 @@ import GroupsIcon from "@/public/svg/groups-icon";
 import GamingIcon from "@/public/svg/gaming-icon";
 import ArrowLeftIcon from "@/public/svg/arrow-left-icon";
 import SearchItem from "@/components/sub-components/search-item";
-
+import { useViewModel } from "./useViewModel";
 const Navbar = () => {
-    const [activeTab, setActiveTab] = useState("/");
-    const [isSearchOpen, setIsSearchOpen] = useState(false);
-    const [isSearchBarExpanded, setIsSearchBarExpanded] = useState(false);
-    const [isSearchFocused, setIsSearchFocused] = useState(false);
-    const [searchValue, setSearchValue] = useState("");
-    const searchRef = useRef<HTMLInputElement | null>(null);
-    const modalRef = useRef<HTMLDivElement | null>(null);
-    const modalInputRef = useRef<HTMLInputElement | null>(null);
+    const {
+        activeTab,
+        setActiveTab,
+        isSearchOpen,
+        setIsSearchOpen,
+        isSearchBarExpanded,
+        isSearchFocused,
+        setIsSearchFocused,
+        searchValue,
+        setSearchValue,
+        searchRef,
+        modalRef,
+        modalInputRef,
+    } = useViewModel();
+
     const navItems = [
         { icon: <HomeIcon width="24" height="24" isActive={activeTab === "/"} />, name: "home", routeName: "/" },
         { icon: <VideoIcon width="24" height="24" isActive={activeTab === "watch"} />, name: "video", routeName: "watch" },
@@ -38,28 +45,6 @@ const Navbar = () => {
         { icon: <GroupsIcon width="24" height="24" isActive={activeTab === "groups"} />, name: "groups", routeName: "groups" },
         { icon: <GamingIcon width="24" height="24" isActive={activeTab === "gaming"} />, name: "gaming", routeName: "gaming" },
     ];
-    useEffect(() => {
-        function handleClickOutside(event: MouseEvent) {
-            const target = event.target as Node;
-            if (searchRef.current && !searchRef.current.contains(target) && modalRef.current && !modalRef.current.contains(target)) {
-                setIsSearchOpen(false);
-            }
-        }
-
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, []);
-
-    useEffect(() => {
-        if (isSearchOpen) {
-            const timeout = setTimeout(() => setIsSearchBarExpanded(true), 150);
-            return () => clearTimeout(timeout);
-        } else {
-            setIsSearchBarExpanded(false);
-        }
-    }, [isSearchOpen]);
 
     return (
         <>
@@ -191,12 +176,10 @@ const Navbar = () => {
                                 onChange={(e) => setSearchValue(e.target.value)}
                                 placeholder="Search Facebook"
                                 onFocus={() => {
-                                    console.log("Input is focused");
                                     setIsSearchOpen(true);
                                     setIsSearchFocused(true);
                                 }}
                                 onBlur={() => {
-                                    console.log("Clicked outside input");
                                     setIsSearchFocused(false);
                                 }}
                                 className="bg-transparent outline-none border-none placeholder:text-[color:var(--secondary-text)] placeholder:text-md pt-[7px] pb-[9px] w-full h-full transition-[padding] duration-300"
