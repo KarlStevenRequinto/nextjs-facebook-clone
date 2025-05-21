@@ -15,8 +15,12 @@ import VideoIcon from "@/public/svg/video-icon";
 import MarketplaceIcon from "@/public/svg/marketplace-icon";
 import GroupsIcon from "@/public/svg/groups-icon";
 import GamingIcon from "@/public/svg/gaming-icon";
-import SearchModal from "./_navbar-Modals/SearchModal";
+import SearchModal from "./_navbar-modals/search-modal";
 import { useViewModel } from "./useViewModel";
+import MenuModal from "./_navbar-modals/menu-modal";
+import MessengerModal from "./_navbar-modals/messenger-modal";
+import NotificationModal from "./_navbar-modals/notifications-modal";
+import AccountModal from "./_navbar-modals/account-modal";
 
 const Navbar = () => {
     const {
@@ -27,15 +31,19 @@ const Navbar = () => {
         isSearchBarExpanded,
         isSearchFocused,
         setIsSearchFocused,
+        isMenuOpen,
+        isMessengerOpen,
+        isNotificationOpen,
+        isAccountOpen,
         searchValue,
         setSearchValue,
         searchRef,
         modalRef,
         modalInputRef,
         activeIcon,
-        setActiveIcon,
         isProfilePressed,
         setIsProfilePressed,
+        handleModalToggle,
     } = useViewModel();
 
     const navItems = [
@@ -119,7 +127,7 @@ const Navbar = () => {
                             iconHeight={40}
                             iconWidth={40}
                             isActive={activeIcon === "menu"}
-                            onClickIcon={() => setActiveIcon((prev) => (prev === "menu" ? null : "menu"))}
+                            onClickIcon={() => handleModalToggle("menu")}
                         />
                         <ActionIcons
                             icon={
@@ -132,7 +140,7 @@ const Navbar = () => {
                             iconHeight={40}
                             iconWidth={40}
                             isActive={activeIcon === "messenger"}
-                            onClickIcon={() => setActiveIcon((prev) => (prev === "messenger" ? null : "messenger"))}
+                            onClickIcon={() => handleModalToggle("messenger")}
                         />
                         <ActionIcons
                             icon={
@@ -145,7 +153,7 @@ const Navbar = () => {
                             iconHeight={40}
                             iconWidth={40}
                             isActive={activeIcon === "notification"}
-                            onClickIcon={() => setActiveIcon((prev) => (prev === "notification" ? null : "notification"))}
+                            onClickIcon={() => handleModalToggle("notification")}
                         />
                     </div>
                     <div
@@ -155,6 +163,7 @@ const Navbar = () => {
                         onMouseDown={() => setIsProfilePressed(true)}
                         onMouseUp={() => setIsProfilePressed(false)}
                         onMouseLeave={() => setIsProfilePressed(false)}
+                        onClick={() => handleModalToggle("account")}
                     >
                         {/* Profile Image */}
                         <Image src="/images/profile-pic.jpg" alt="profile picture" fill className="object-cover rounded-full" />
@@ -186,12 +195,13 @@ const Navbar = () => {
             />
 
             {/* Menu Modal */}
-
+            <MenuModal isMenuOpen={isMenuOpen} />
             {/* Messenger Modal */}
-
+            <MessengerModal isMessengerOpen={isMessengerOpen} />
             {/* Notifications Modal */}
-
+            <NotificationModal isNotificationOpen={isNotificationOpen} />
             {/* Account Modal */}
+            <AccountModal isAccountOpen={isAccountOpen} />
         </>
     );
 };
