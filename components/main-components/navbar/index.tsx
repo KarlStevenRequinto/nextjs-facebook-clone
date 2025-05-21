@@ -117,7 +117,7 @@ const Navbar = () => {
                             iconHeight={40}
                             iconWidth={40}
                             isActive={activeIcon === "menu"}
-                            onClickIcon={() => setActiveIcon("menu")}
+                            onClickIcon={() => setActiveIcon((prev) => (prev === "menu" ? null : "menu"))}
                         />
                         <ActionIcons
                             icon={
@@ -130,7 +130,7 @@ const Navbar = () => {
                             iconHeight={40}
                             iconWidth={40}
                             isActive={activeIcon === "messenger"}
-                            onClickIcon={() => setActiveIcon("messenger")}
+                            onClickIcon={() => setActiveIcon((prev) => (prev === "messenger" ? null : "messenger"))}
                         />
                         <ActionIcons
                             icon={
@@ -143,7 +143,7 @@ const Navbar = () => {
                             iconHeight={40}
                             iconWidth={40}
                             isActive={activeIcon === "notification"}
-                            onClickIcon={() => setActiveIcon("notification")}
+                            onClickIcon={() => setActiveIcon((prev) => (prev === "notification" ? null : "notification"))}
                         />
                     </div>
                     <div className="group w-[40px] h-[40px] rounded-full border border-[#cec8c4ab] bg-[#E2E5E9] transition-colors duration-200 cursor-pointer relative">
