@@ -35,6 +35,7 @@ export const useViewModel = () => {
                 if (modalName === "messenger") setIsMessengerOpen(true);
                 if (modalName === "notification") setIsNotificationOpen(true);
                 if (modalName === "account") setIsAccountOpen(true);
+
                 return modalName;
             }
         });

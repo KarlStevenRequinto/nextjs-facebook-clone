@@ -32,9 +32,13 @@ const Navbar = () => {
         isSearchFocused,
         setIsSearchFocused,
         isMenuOpen,
+        setIsMenuOpen,
         isMessengerOpen,
+        setIsMessengerOpen,
         isNotificationOpen,
+        setIsNotificationOpen,
         isAccountOpen,
+        setIsAccountOpen,
         searchValue,
         setSearchValue,
         searchRef,
@@ -44,6 +48,7 @@ const Navbar = () => {
         isProfilePressed,
         setIsProfilePressed,
         handleModalToggle,
+        setActiveIcon,
     } = useViewModel();
 
     const navItems = [
@@ -106,6 +111,11 @@ const Navbar = () => {
                                 isActive={activeTab === item.name}
                                 onClickBtn={() => {
                                     setActiveTab(item.name);
+                                    setIsMenuOpen(false);
+                                    setIsMessengerOpen(false);
+                                    setIsNotificationOpen(false);
+                                    setIsAccountOpen(false);
+                                    setActiveIcon(null);
                                 }}
                                 tooltipText={item.name.charAt(0).toUpperCase() + item.name.slice(1)}
                             />
