@@ -34,6 +34,8 @@ const Navbar = () => {
         modalInputRef,
         activeIcon,
         setActiveIcon,
+        isProfilePressed,
+        setIsProfilePressed,
     } = useViewModel();
 
     const navItems = [
@@ -146,7 +148,14 @@ const Navbar = () => {
                             onClickIcon={() => setActiveIcon((prev) => (prev === "notification" ? null : "notification"))}
                         />
                     </div>
-                    <div className="group w-[40px] h-[40px] rounded-full border border-[#cec8c4ab] bg-[#E2E5E9] transition-colors duration-200 cursor-pointer relative">
+                    <div
+                        className={`group w-[40px] h-[40px] rounded-full border border-[#cec8c4ab] bg-[#E2E5E9] transition-all duration-100 cursor-pointer relative ${
+                            isProfilePressed ? "scale-96" : "scale-100"
+                        }`}
+                        onMouseDown={() => setIsProfilePressed(true)}
+                        onMouseUp={() => setIsProfilePressed(false)}
+                        onMouseLeave={() => setIsProfilePressed(false)}
+                    >
                         {/* Profile Image */}
                         <Image src="/images/profile-pic.jpg" alt="profile picture" fill className="object-cover rounded-full" />
 
@@ -234,6 +243,14 @@ const Navbar = () => {
                     </div>
                 </div>
             )}
+
+            {/* Menu Modal */}
+
+            {/* Messenger Modal */}
+
+            {/* Notifications Modal */}
+
+            {/* Account Modal */}
         </>
     );
 };
