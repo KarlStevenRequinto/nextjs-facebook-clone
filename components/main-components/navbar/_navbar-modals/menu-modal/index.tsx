@@ -1,14 +1,12 @@
 import MenuItem from "@/components/sub-components/menu-item";
 import React from "react";
 import useViewModel from "./useViewModel";
-
+import { menuEntertainmentItems, menuProfessionalItems, menuShoppingItems, menuSocialItems } from "@/app/constants/dummy-data";
 interface MenuModalProps {
     isMenuOpen: boolean;
 }
 
 const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
-    const menuProfessionalItems = useViewModel();
-
     if (!isMenuOpen) return null;
 
     return (
@@ -37,69 +35,44 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
 
                     <div>
                         <h3 className="text-sm font-bold text-gray-600 mb-2">Social</h3>
-                        <ul className="space-y-2 text-sm">
-                            <li>
-                                <strong>Events</strong> — Organize or find events and activities nearby.
-                            </li>
-                            <li>
-                                <strong>Friends</strong> — Search for people you may know.
-                            </li>
-                            <li>
-                                <strong>Groups</strong> — Connect with others who share your interests.
-                            </li>
-                            <li>
-                                <strong>News Feed</strong> — See posts from friends and Pages.
-                            </li>
-                            <li>
-                                <strong>Feeds</strong> — Recent posts from groups and more.
-                            </li>
-                            <li>
-                                <strong>Pages</strong> — Connect with businesses on Facebook.
-                            </li>
-                        </ul>
+                        {menuSocialItems.map((item, index) => (
+                            <MenuItem
+                                key={index}
+                                title={item.title}
+                                description={item.description}
+                                imgSource={item.imgSource}
+                                imgHeight={item.imgHeight}
+                                imgWidth={item.imgWidth}
+                            />
+                        ))}
                     </div>
 
                     <div className="mb-6">
-                        <h3 className="text-sm font-bold text-gray-600 mb-2">Professional</h3>
-                        <ul className="space-y-2 text-sm">
-                            <li>
-                                <strong>Ads Manager</strong> — Create, manage and track the performance of your ads.
-                            </li>
-                            <li className="bg-gray-100 rounded-lg p-2">
-                                <strong>Meta Business Suite</strong>
-                                <br />A better way to manage your business across Facebook and Instagram.
-                            </li>
-                            <li>
-                                <strong>Professional Dashboard</strong> — Get insights, create ads, and explore tools.
-                            </li>
-                            <li>
-                                <strong>Ad Center</strong> — Manage all the ads you create in Pages.
-                            </li>
-                        </ul>
+                        <h3 className="text-sm font-bold text-gray-600 mb-2">Entertainment</h3>
+                        {menuEntertainmentItems.map((item, index) => (
+                            <MenuItem
+                                key={index}
+                                title={item.title}
+                                description={item.description}
+                                imgSource={item.imgSource}
+                                imgHeight={item.imgHeight}
+                                imgWidth={item.imgWidth}
+                            />
+                        ))}
                     </div>
 
                     <div>
-                        <h3 className="text-sm font-bold text-gray-600 mb-2">Social</h3>
-                        <ul className="space-y-2 text-sm">
-                            <li>
-                                <strong>Events</strong> — Organize or find events and activities nearby.
-                            </li>
-                            <li>
-                                <strong>Friends</strong> — Search for people you may know.
-                            </li>
-                            <li>
-                                <strong>Groups</strong> — Connect with others who share your interests.
-                            </li>
-                            <li>
-                                <strong>News Feed</strong> — See posts from friends and Pages.
-                            </li>
-                            <li>
-                                <strong>Feeds</strong> — Recent posts from groups and more.
-                            </li>
-                            <li>
-                                <strong>Pages</strong> — Connect with businesses on Facebook.
-                            </li>
-                        </ul>
+                        <h3 className="text-sm font-bold text-gray-600 mb-2">Shopping</h3>
+                        {menuShoppingItems.map((item, index) => (
+                            <MenuItem
+                                key={index}
+                                title={item.title}
+                                description={item.description}
+                                imgSource={item.imgSource}
+                                imgHeight={item.imgHeight}
+                                imgWidth={item.imgWidth}
+                            />
+                        ))}
                     </div>
 
                     <div className="mb-6">
