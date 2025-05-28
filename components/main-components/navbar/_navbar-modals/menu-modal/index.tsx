@@ -1,10 +1,14 @@
+import MenuItem from "@/components/sub-components/menu-item";
 import React from "react";
+import useViewModel from "./useViewModel";
 
 interface MenuModalProps {
     isMenuOpen: boolean;
 }
 
 const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
+    const menuProfessionalItems = useViewModel();
+
     if (!isMenuOpen) return null;
 
     return (
@@ -19,21 +23,16 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
 
                     <div className="mb-6">
                         <h3 className="text-sm font-bold text-gray-600 mb-2">Professional</h3>
-                        <ul className="space-y-2 text-sm">
-                            <li>
-                                <strong>Ads Manager</strong> — Create, manage and track the performance of your ads.
-                            </li>
-                            <li className="bg-gray-100 rounded-lg p-2">
-                                <strong>Meta Business Suite</strong>
-                                <br />A better way to manage your business across Facebook and Instagram.
-                            </li>
-                            <li>
-                                <strong>Professional Dashboard</strong> — Get insights, create ads, and explore tools.
-                            </li>
-                            <li>
-                                <strong>Ad Center</strong> — Manage all the ads you create in Pages.
-                            </li>
-                        </ul>
+                        {menuProfessionalItems.map((item, index) => (
+                            <MenuItem
+                                key={index}
+                                title={item.title}
+                                description={item.description}
+                                imgSource={item.imgSource}
+                                imgHeight={item.imgHeight}
+                                imgWidth={item.imgWidth}
+                            />
+                        ))}
                     </div>
 
                     <div>
@@ -105,21 +104,6 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
 
                     <div className="mb-6">
                         <h3 className="text-sm font-bold text-gray-600 mb-2">Professional</h3>
-                        <ul className="space-y-2 text-sm">
-                            <li>
-                                <strong>Ads Manager</strong> — Create, manage and track the performance of your ads.
-                            </li>
-                            <li className="bg-gray-100 rounded-lg p-2">
-                                <strong>Meta Business Suite</strong>
-                                <br />A better way to manage your business across Facebook and Instagram.
-                            </li>
-                            <li>
-                                <strong>Professional Dashboard</strong> — Get insights, create ads, and explore tools.
-                            </li>
-                            <li>
-                                <strong>Ad Center</strong> — Manage all the ads you create in Pages.
-                            </li>
-                        </ul>
                     </div>
 
                     <div>
