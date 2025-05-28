@@ -1,7 +1,15 @@
 import MenuItem from "@/components/sub-components/menu-item";
 import React from "react";
 import useViewModel from "./useViewModel";
-import { menuEntertainmentItems, menuProfessionalItems, menuShoppingItems, menuSocialItems } from "@/app/constants/dummy-data";
+import {
+    menuCommunityResourcesItems,
+    menuEntertainmentItems,
+    menuMoreFromMetaItems,
+    menuPersonalItems,
+    menuProfessionalItems,
+    menuShoppingItems,
+    menuSocialItems,
+} from "@/app/constants/dummy-data";
 interface MenuModalProps {
     isMenuOpen: boolean;
 }
@@ -77,7 +85,35 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
 
                     <div className="mb-6">
                         <h3 className="text-sm font-bold text-gray-600 mb-2">Personal</h3>
-                        {menuShoppingItems.map((item, index) => (
+                        {menuPersonalItems.map((item, index) => (
+                            <MenuItem
+                                key={index}
+                                title={item.title}
+                                description={item.description}
+                                imgSource={item.imgSource}
+                                imgHeight={item.imgHeight}
+                                imgWidth={item.imgWidth}
+                            />
+                        ))}
+                    </div>
+
+                    <div className="mb-6">
+                        <h3 className="text-sm font-bold text-gray-600 mb-2">Community Resources</h3>
+                        {menuCommunityResourcesItems.map((item, index) => (
+                            <MenuItem
+                                key={index}
+                                title={item.title}
+                                description={item.description}
+                                imgSource={item.imgSource}
+                                imgHeight={item.imgHeight}
+                                imgWidth={item.imgWidth}
+                            />
+                        ))}
+                    </div>
+
+                    <div className="mb-6">
+                        <h3 className="text-sm font-bold text-gray-600 mb-2">More from Meta</h3>
+                        {menuMoreFromMetaItems.map((item, index) => (
                             <MenuItem
                                 key={index}
                                 title={item.title}

@@ -156,7 +156,7 @@ export const menuCommunityResourcesItems = [
     },
 ];
 
-export const menuFromMetaItems = [
+export const menuMoreFromMetaItems = [
     {
         title: "Meta AI",
         description: "Ask questions, brainstorm ideas, create any image you can imagine and more.",
