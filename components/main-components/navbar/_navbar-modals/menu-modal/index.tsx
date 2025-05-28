@@ -76,31 +76,17 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                     </div>
 
                     <div className="mb-6">
-                        <h3 className="text-sm font-bold text-gray-600 mb-2">Professional</h3>
-                    </div>
-
-                    <div>
-                        <h3 className="text-sm font-bold text-gray-600 mb-2">Social</h3>
-                        <ul className="space-y-2 text-sm">
-                            <li>
-                                <strong>Events</strong> — Organize or find events and activities nearby.
-                            </li>
-                            <li>
-                                <strong>Friends</strong> — Search for people you may know.
-                            </li>
-                            <li>
-                                <strong>Groups</strong> — Connect with others who share your interests.
-                            </li>
-                            <li>
-                                <strong>News Feed</strong> — See posts from friends and Pages.
-                            </li>
-                            <li>
-                                <strong>Feeds</strong> — Recent posts from groups and more.
-                            </li>
-                            <li>
-                                <strong>Pages</strong> — Connect with businesses on Facebook.
-                            </li>
-                        </ul>
+                        <h3 className="text-sm font-bold text-gray-600 mb-2">Personal</h3>
+                        {menuShoppingItems.map((item, index) => (
+                            <MenuItem
+                                key={index}
+                                title={item.title}
+                                description={item.description}
+                                imgSource={item.imgSource}
+                                imgHeight={item.imgHeight}
+                                imgWidth={item.imgWidth}
+                            />
+                        ))}
                     </div>
                 </div>
 

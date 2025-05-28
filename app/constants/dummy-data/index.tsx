@@ -114,3 +114,68 @@ export const menuShoppingItems = [
         imgHeight: 36,
     },
 ];
+
+export const menuPersonalItems = [
+    {
+        title: "Recent ad activity",
+        description: "See all the ads you've interacted with on Facebook.",
+        imgSource: "/images/recent-ad-activity.png",
+        imgWidth: 36,
+        imgHeight: 36,
+    },
+    {
+        title: "Memories",
+        description: "Browse your old photos, videos and posts on Facebook.",
+        imgSource: "/images/memories.png",
+        imgWidth: 36,
+        imgHeight: 36,
+    },
+    {
+        title: "Saved",
+        description: "Find posts, photos and videos you've saved for later.",
+        imgSource: "/images/saved.png",
+        imgWidth: 36,
+        imgHeight: 36,
+    },
+];
+
+export const menuCommunityResourcesItems = [
+    {
+        title: "Climate Science Center",
+        description: "Learn about climate change and its effects.",
+        imgSource: "/images/climate-science-center.png",
+        imgWidth: 36,
+        imgHeight: 36,
+    },
+    {
+        title: "Fundraisers",
+        description: "Donate and raise money for nonprofits and personal causes.",
+        imgSource: "/images/fundraisers.png",
+        imgWidth: 36,
+        imgHeight: 36,
+    },
+];
+
+export const menuFromMetaItems = [
+    {
+        title: "Meta AI",
+        description: "Ask questions, brainstorm ideas, create any image you can imagine and more.",
+        imgSource: "/images/meta-ai.png",
+        imgWidth: 36,
+        imgHeight: 36,
+    },
+    {
+        title: "Messenger Kids",
+        description: "Let kids message with close friends and family.",
+        imgSource: "/images/messenger-kids.png",
+        imgWidth: 36,
+        imgHeight: 36,
+    },
+    {
+        title: "WahtsApp",
+        description: "Message and call people privately on your computer.",
+        imgSource: "/images/whatsapp.png",
+        imgWidth: 36,
+        imgHeight: 36,
+    },
+];
