@@ -18,14 +18,19 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
     if (!isMenuOpen) return null;
 
     return (
-        <div className="fixed top-[52px] right-4 w-[700px] h-[calc(100vh-70px)] bg-[var(--card-background-100)] rounded-lg shadow-xl z-90 overflow-hidden flex flex-col">
-            <div className="p-4 border-b border-gray-200 shadow-sm z-10">
-                <span className="text-xl font-semibold">Menu</span>
+        <div className="fixed top-[52px] right-4 w-[608px] h-[calc(100vh-70px)] bg-[var(--card-background-100)] rounded-lg shadow-xl z-90 overflow-hidden flex flex-col">
+            <div className="py-3.5">
+                <span className="inline-block align-top font-bold text-[24px] leading-[20px] px-4">Menu</span>
             </div>
 
-            <div className="flex-1 overflow-y-auto flex">
-                <div className="w-2/3 p-4 pr-6">
-                    <input type="text" placeholder="Search menu" className="w-full mb-4 px-4 py-2 rounded-full bg-gray-100 text-sm outline-none" />
+            <div className="overflow-y-auto flex pl-4 gap-4">
+                {/* Left: Scroll Section */}
+                <div className="bg-amber-500 rounded-lg w-[360px] px-2">
+                    <input
+                        type="text"
+                        placeholder="Search menu"
+                        className="w-[calc(100%-16px)] my-4 mx-2 px-4 py-2 rounded-full bg-[var(--comment-background)] outline-none"
+                    />
 
                     <div className="mb-6">
                         <h3 className="text-sm font-bold text-gray-600 mb-2">Professional</h3>
@@ -127,7 +132,7 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                 </div>
 
                 {/* Right: Create Section */}
-                <div className="w-1/3 bg-gray-50 p-4 border-l border-gray-200">
+                <div className="bg-yellow-700 rounded-lg w-[200px]">
                     <h3 className="text-sm font-bold text-gray-600 mb-2">Create</h3>
                     <ul className="space-y-3 text-sm">
                         <li>📝 Post</li>
