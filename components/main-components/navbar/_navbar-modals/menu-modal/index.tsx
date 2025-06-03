@@ -23,7 +23,7 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                 <span className="inline-block align-top font-bold text-[24px] leading-[20px] px-4">Menu</span>
             </div>
 
-            <div className="overflow-y-auto flex pl-4 gap-4">
+            <div className="overflow-y-auto flex pl-4 gap-4 custom-scrollbar h-[calc(100vh-150px)]">
                 {/* Left: Scroll Section */}
                 <div className="bg-amber-500 rounded-lg w-[360px] px-2">
                     <input
