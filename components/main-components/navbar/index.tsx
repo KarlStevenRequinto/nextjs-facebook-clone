@@ -72,7 +72,7 @@ const Navbar = () => {
                         <Image src="/icons/facebook-icon.png" alt="facebook icon" height={40} width={40} className="object-cover" />
                     </div>
 
-                    <div className="hidden xl:flex items-center bg-[color:var(--comment-background)] text-white rounded-full w-[240px] h-[40px]">
+                    <div className="hidden xl:flex items-center bg-[color:var(--comment-background)] rounded-full w-[240px] h-[40px]">
                         <span className="pl-3">
                             <SearchIcon fillColor="var(--secondary-text)" width="16" height="16" />
                         </span>

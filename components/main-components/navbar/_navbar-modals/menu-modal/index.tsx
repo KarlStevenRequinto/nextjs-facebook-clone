@@ -1,6 +1,7 @@
 import MenuItem from "@/components/sub-components/menu-item";
 import React from "react";
 import useViewModel from "./useViewModel";
+import SearchIcon from "@/public/svg/search-icon";
 import {
     menuCommunityResourcesItems,
     menuEntertainmentItems,
@@ -10,6 +11,7 @@ import {
     menuShoppingItems,
     menuSocialItems,
 } from "@/app/constants/dummy-data";
+import SearchMenuIcon from "@/public/generic-icons/search-menu-icon";
 interface MenuModalProps {
     isMenuOpen: boolean;
 }
@@ -25,12 +27,21 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
 
             <div className="overflow-y-auto flex pl-4 gap-4 custom-scrollbar h-[calc(100vh-150px)]">
                 {/* Left: Scroll Section */}
-                <div className="bg-amber-500 rounded-lg w-[360px] px-2">
-                    <input
-                        type="text"
-                        placeholder="Search menu"
-                        className="w-[calc(100%-16px)] my-4 mx-2 px-4 py-2 rounded-full bg-[var(--comment-background)] outline-none"
-                    />
+                <div className="bg-white rounded-lg w-[360px] px-2 pt-4">
+                    <div className="hidden xl:flex items-center bg-[color:var(--comment-background)] rounded-full h-[36px] mx-2">
+                        <span className="pl-3 h-full flex items-center justify-center">
+                            <SearchMenuIcon />
+                        </span>
+                        <input
+                            type="text"
+                            placeholder="Search menu"
+                            className="h-full w-full rounded-full bg-[var(--comment-background)] outline-none placeholder:text-md placeholder:text-[color:var(--secondary-text)]"
+                            style={{
+                                color: "var(--primary-black)",
+                                padding: "7px 6px 9px",
+                            }}
+                        />
+                    </div>
 
                     <div className="mb-6">
                         <h3 className="text-sm font-bold text-gray-600 mb-2">Professional</h3>
