@@ -12,9 +12,17 @@ import {
     menuSocialItems,
 } from "@/app/constants/dummy-data";
 import SearchMenuIcon from "@/public/generic-icons/search-menu-icon";
+import Divider from "@/components/sub-components/divider";
 interface MenuModalProps {
     isMenuOpen: boolean;
 }
+
+interface menuHeaderProps {
+    title: string;
+}
+const MenuHeader = ({ title }: menuHeaderProps) => {
+    return <h3 className="text-[17px] font-medium px-2 mb-2">{title}</h3>;
+};
 
 const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
     if (!isMenuOpen) return null;
@@ -27,8 +35,8 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
 
             <div className="overflow-y-auto flex pl-4 gap-4 custom-scrollbar h-[calc(100vh-150px)]">
                 {/* Left: Scroll Section */}
-                <div className="bg-white rounded-lg w-[360px] px-2 pt-4">
-                    <div className="hidden xl:flex items-center bg-[color:var(--comment-background)] rounded-full h-[36px] mx-2">
+                <div className="bg-white rounded-lg w-[360px] px-2 pt-4 flex-shrink-0 min-h-max">
+                    <div className="flex xl:flex items-center bg-[color:var(--comment-background)] rounded-full h-[36px] mx-2 mb-4">
                         <span className="pl-3 h-full flex items-center justify-center">
                             <SearchMenuIcon />
                         </span>
@@ -43,8 +51,8 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                         />
                     </div>
 
-                    <div className="mb-6">
-                        <h3 className="text-sm font-bold text-gray-600 mb-2">Professional</h3>
+                    <div className="mb-5">
+                        <MenuHeader title="Professional" />
                         {menuProfessionalItems.map((item, index) => (
                             <MenuItem
                                 key={index}
@@ -56,9 +64,9 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                             />
                         ))}
                     </div>
-
-                    <div>
-                        <h3 className="text-sm font-bold text-gray-600 mb-2">Social</h3>
+                    <Divider />
+                    <div className="mb-5">
+                        <MenuHeader title="Social" />
                         {menuSocialItems.map((item, index) => (
                             <MenuItem
                                 key={index}
@@ -70,9 +78,9 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                             />
                         ))}
                     </div>
-
-                    <div className="mb-6">
-                        <h3 className="text-sm font-bold text-gray-600 mb-2">Entertainment</h3>
+                    <Divider />
+                    <div className="mb-5">
+                        <MenuHeader title="Entertainment" />
                         {menuEntertainmentItems.map((item, index) => (
                             <MenuItem
                                 key={index}
@@ -84,9 +92,9 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                             />
                         ))}
                     </div>
-
-                    <div>
-                        <h3 className="text-sm font-bold text-gray-600 mb-2">Shopping</h3>
+                    <Divider />
+                    <div className="mb-5">
+                        <MenuHeader title="Shopping" />
                         {menuShoppingItems.map((item, index) => (
                             <MenuItem
                                 key={index}
@@ -98,9 +106,9 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                             />
                         ))}
                     </div>
-
-                    <div className="mb-6">
-                        <h3 className="text-sm font-bold text-gray-600 mb-2">Personal</h3>
+                    <Divider />
+                    <div className="mb-5">
+                        <MenuHeader title="Personal" />
                         {menuPersonalItems.map((item, index) => (
                             <MenuItem
                                 key={index}
@@ -112,9 +120,9 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                             />
                         ))}
                     </div>
-
-                    <div className="mb-6">
-                        <h3 className="text-sm font-bold text-gray-600 mb-2">Community Resources</h3>
+                    <Divider />
+                    <div className="mb-5">
+                        <MenuHeader title="Community Resources" />
                         {menuCommunityResourcesItems.map((item, index) => (
                             <MenuItem
                                 key={index}
@@ -126,9 +134,9 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                             />
                         ))}
                     </div>
-
-                    <div className="mb-6">
-                        <h3 className="text-sm font-bold text-gray-600 mb-2">More from Meta</h3>
+                    <Divider />
+                    <div className="mb-5">
+                        <MenuHeader title="More from Meta" />
                         {menuMoreFromMetaItems.map((item, index) => (
                             <MenuItem
                                 key={index}
