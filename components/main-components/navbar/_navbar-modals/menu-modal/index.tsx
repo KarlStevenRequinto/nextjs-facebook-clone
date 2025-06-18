@@ -33,9 +33,10 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                 <span className="inline-block align-top font-bold text-[24px] leading-[20px] px-4">Menu</span>
             </div>
 
-            <div className="overflow-y-auto flex pl-4 gap-4 custom-scrollbar h-[calc(100vh-150px)]">
+            <div className="overflow-y-auto flex pl-4 gap-4 custom-scrollbar pb-3">
                 {/* Left: Scroll Section */}
-                <div className="bg-white rounded-lg w-[360px] px-2 pt-4 flex-shrink-0 min-h-max">
+
+                <div className="bg-white shadow-[0_1px_1px_rgba(0,0,0,0.1)] rounded-lg w-[360px] px-2 pt-4 flex-shrink-0 min-h-max border border-gray-200">
                     <div className="flex xl:flex items-center bg-[color:var(--comment-background)] rounded-full h-[36px] mx-2 mb-4">
                         <span className="pl-3 h-full flex items-center justify-center">
                             <SearchMenuIcon />
@@ -61,11 +62,12 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                                 imgSource={item.imgSource}
                                 imgHeight={item.imgHeight}
                                 imgWidth={item.imgWidth}
+                                imgStyle={{ marginRight: "6px" }}
                             />
                         ))}
                     </div>
                     <Divider />
-                    <div className="mb-5">
+                    <div className="mb-5 mt-3">
                         <MenuHeader title="Social" />
                         {menuSocialItems.map((item, index) => (
                             <MenuItem
@@ -79,7 +81,7 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                         ))}
                     </div>
                     <Divider />
-                    <div className="mb-5">
+                    <div className="mb-5 mt-3">
                         <MenuHeader title="Entertainment" />
                         {menuEntertainmentItems.map((item, index) => (
                             <MenuItem
@@ -93,7 +95,7 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                         ))}
                     </div>
                     <Divider />
-                    <div className="mb-5">
+                    <div className="mb-5 mt-3">
                         <MenuHeader title="Shopping" />
                         {menuShoppingItems.map((item, index) => (
                             <MenuItem
@@ -107,7 +109,7 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                         ))}
                     </div>
                     <Divider />
-                    <div className="mb-5">
+                    <div className="mb-5 mt-3">
                         <MenuHeader title="Personal" />
                         {menuPersonalItems.map((item, index) => (
                             <MenuItem
@@ -121,7 +123,7 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                         ))}
                     </div>
                     <Divider />
-                    <div className="mb-5">
+                    <div className="mb-5 mt-3">
                         <MenuHeader title="Community Resources" />
                         {menuCommunityResourcesItems.map((item, index) => (
                             <MenuItem
@@ -135,7 +137,7 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                         ))}
                     </div>
                     <Divider />
-                    <div className="mb-5">
+                    <div className="mb-5 mt-3">
                         <MenuHeader title="More from Meta" />
                         {menuMoreFromMetaItems.map((item, index) => (
                             <MenuItem
