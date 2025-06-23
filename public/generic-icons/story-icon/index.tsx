@@ -1,6 +1,7 @@
 import React from "react";
+import { IconProps } from "@/app/types";
 
-const StoryIcon = () => {
+const StoryIcon = ({ width, height }: IconProps) => {
     return (
         <i
             data-visualcompletion="css-img"
@@ -9,8 +10,8 @@ const StoryIcon = () => {
                 backgroundImage: 'url("https://static.xx.fbcdn.net/rsrc.php/v4/yE/r/KffMN1puaIC.png")',
                 backgroundPosition: "0px -340px",
                 backgroundSize: "auto",
-                width: "20px",
-                height: "20px",
+                width: width,
+                height: height,
                 backgroundRepeat: "no-repeat",
                 display: "inline-block",
             }}

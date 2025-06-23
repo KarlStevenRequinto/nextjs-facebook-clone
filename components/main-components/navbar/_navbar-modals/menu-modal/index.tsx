@@ -13,6 +13,12 @@ import {
 } from "@/app/constants/dummy-data";
 import SearchMenuIcon from "@/public/generic-icons/search-menu-icon";
 import Divider from "@/components/sub-components/divider";
+import PostIcon from "@/public/generic-icons/post-icon";
+import StoryIcon from "@/public/generic-icons/story-icon";
+import ReelsIcon from "@/public/generic-icons/reels-icon";
+import ReelsGenericIcon from "@/public/generic-icons/reels-generic-icon";
+import LifeEventIcon from "@/public/generic-icons/life-event-icon";
+import PageIcon from "@/public/generic-icons/page-icon";
 interface MenuModalProps {
     isMenuOpen: boolean;
 }
@@ -156,12 +162,24 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                 <div className="bg-yellow-700 rounded-lg w-[200px]">
                     <h3 className="text-sm font-bold text-gray-600 mb-2">Create</h3>
                     <ul className="space-y-3 text-sm">
-                        <li>📝 Post</li>
-                        <li>📸 Story</li>
-                        <li>🎬 Reel</li>
-                        <li>💍 Life event</li>
+                        <li>
+                            <PostIcon height="20px" width="20px" />
+                            Post
+                        </li>
+                        <li>
+                            <StoryIcon height="20px" width="20px" />
+                            Story
+                        </li>
+                        <li>
+                            <ReelsGenericIcon height="20px" width="20px" /> Reel
+                        </li>
+                        <li>
+                            <LifeEventIcon height="20px" width="20px" /> Life event
+                        </li>
                         <hr className="my-2" />
-                        <li>📄 Page</li>
+                        <li>
+                            <PageIcon height="20px" width="20px" /> Page
+                        </li>
                         <li>📢 Ad</li>
                         <li>👥 Group</li>
                         <li>📅 Event</li>
