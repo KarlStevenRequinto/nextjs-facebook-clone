@@ -179,3 +179,52 @@ export const menuMoreFromMetaItems = [
         imgHeight: 36,
     },
 ];
+
+export const menuCreateItems = [
+    {
+        label: "Post",
+        imageUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/NLhljmG4TZq.png",
+        backgroundPosition: "0px -297px",
+    },
+    {
+        label: "Story",
+        imageUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yE/r/KffMN1puaIC.png",
+        backgroundPosition: "0px -340px",
+    },
+    {
+        label: "Reel",
+        imageUrl:
+            "https://static.xx.fbcdn.net/rsrc.php/v4/yJ/r/_0cCaNMSLoE.png?_nc_eui2=AeFOP2NRNBFq_quxF2Fg-hRCBeq9mdFcqOwF6r2Z0Vyo7LTnQqEFShK6VreGsDghOB07UQXm0JwnJpTeZz4JYN0b",
+        backgroundPosition: "0px -96px",
+    },
+    {
+        label: "Life event",
+        imageUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yE/r/KffMN1puaIC.png",
+        backgroundPosition: "0px -256px",
+    },
+    {
+        label: "Page",
+        imageUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/NLhljmG4TZq.png",
+        backgroundPosition: "0px -129px",
+    },
+    {
+        label: "Ad",
+        imageUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/NLhljmG4TZq.png",
+        backgroundPosition: "0px -549px",
+    },
+    {
+        label: "Groups",
+        imageUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yE/r/KffMN1puaIC.png",
+        backgroundPosition: "0px -67px",
+    },
+    {
+        label: "Event",
+        imageUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/NLhljmG4TZq.png",
+        backgroundPosition: "0px -171px",
+    },
+    {
+        label: "Marketplace listing",
+        imageUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yE/r/KffMN1puaIC.png",
+        backgroundPosition: "0px -319px",
+    },
+];

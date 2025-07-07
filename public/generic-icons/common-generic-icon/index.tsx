@@ -1,14 +1,14 @@
 import React from "react";
-import { IconProps } from "@/app/types";
+import { CommonGenericIconProps } from "@/app/types";
 
-const PostIcon = ({ width, height }: IconProps) => {
+const CommonGenericIcon = ({ width, height, imageUrl, backgroundPosition }: CommonGenericIconProps) => {
     return (
         <i
             data-visualcompletion="css-img"
             aria-hidden="true"
             style={{
-                backgroundImage: 'url("https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/NLhljmG4TZq.png")',
-                backgroundPosition: "0px -297px",
+                backgroundImage: `url("${imageUrl}")`,
+                backgroundPosition: backgroundPosition,
                 backgroundSize: "auto",
                 width: width,
                 height: height,
@@ -19,4 +19,4 @@ const PostIcon = ({ width, height }: IconProps) => {
     );
 };
 
-export default PostIcon;
+export default CommonGenericIcon;
