@@ -153,13 +153,23 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                 </div>
 
                 {/* Right: Create Section */}
-                <div className="bg-yellow-700 rounded-lg w-[200px]">
-                    <h3 className="text-sm font-bold text-gray-600 mb-2">Create</h3>
-                    <ul className="space-y-3 text-sm">
+                <div className="bg-white rounded-lg w-[200px] shadow-[0_1px_1px_rgba(0,0,0,0.1)] border border-gray-200">
+                    <span className="inline-block align-top font-bold text-[20px] leading-[20px] p-3">Create</span>
+                    <ul className="text-sm">
                         {menuCreateItems.map((item, index) => (
-                            <li key={index} className="flex items-center space-x-2">
-                                <CommonGenericIcon height="20px" width="20px" imageUrl={item.imageUrl} backgroundPosition={item.backgroundPosition} />
-                                <span>{item.label}</span>
+                            <li key={index} className="flex items-center space-x-2 px-2">
+                                <div className="p-2 flex items-center space-x-2 cursor-pointer w-full rounded-lg hover:bg-[color:var(--backgorund-300)] transition-colors">
+                                    <div className="rounded-full bg-[var(--secondary-background)] flex items-center justify-center w-9 h-9">
+                                        <CommonGenericIcon
+                                            height="20px"
+                                            width="20px"
+                                            imageUrl={item.imageUrl}
+                                            backgroundPosition={item.backgroundPosition}
+                                        />
+                                    </div>
+
+                                    <span>{item.label}</span>
+                                </div>
                             </li>
                         ))}
                     </ul>
