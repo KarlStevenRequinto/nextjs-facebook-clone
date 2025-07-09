@@ -180,7 +180,7 @@ export const menuMoreFromMetaItems = [
     },
 ];
 
-export const menuCreateItems = [
+export const menuCreateItemsA = [
     {
         label: "Post",
         imageUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/NLhljmG4TZq.png",
@@ -202,6 +202,9 @@ export const menuCreateItems = [
         imageUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yE/r/KffMN1puaIC.png",
         backgroundPosition: "0px -256px",
     },
+];
+
+export const menuCreateItemsB = [
     {
         label: "Page",
         imageUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/NLhljmG4TZq.png",

@@ -2,7 +2,8 @@ import MenuItem from "@/components/sub-components/menu-item";
 import React from "react";
 import {
     menuCommunityResourcesItems,
-    menuCreateItems,
+    menuCreateItemsA,
+    menuCreateItemsB,
     menuEntertainmentItems,
     menuMoreFromMetaItems,
     menuPersonalItems,
@@ -153,10 +154,10 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                 </div>
 
                 {/* Right: Create Section */}
-                <div className="bg-white rounded-lg w-[200px] shadow-[0_1px_1px_rgba(0,0,0,0.1)] border border-gray-200">
+                <div className="bg-white rounded-lg w-[200px] shadow-[0_1px_1px_rgba(0,0,0,0.1)] border border-gray-200 sticky top-0 self-start">
                     <span className="inline-block align-top font-bold text-[20px] leading-[20px] p-3">Create</span>
-                    <ul className="text-sm">
-                        {menuCreateItems.map((item, index) => (
+                    <ul className="text-sm mb-2">
+                        {menuCreateItemsA.map((item, index) => (
                             <li key={index} className="flex items-center space-x-2 px-2">
                                 <div className="p-2 flex items-center space-x-2 cursor-pointer w-full rounded-lg hover:bg-[color:var(--backgorund-300)] transition-colors">
                                     <div className="rounded-full bg-[var(--secondary-background)] flex items-center justify-center w-9 h-9">
@@ -168,7 +169,26 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                                         />
                                     </div>
 
-                                    <span>{item.label}</span>
+                                    <span className="text-[15px] leading-[1.3333] font-semibold">{item.label}</span>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                    <Divider />
+                    <ul className="text-sm mt-2">
+                        {menuCreateItemsB.map((item, index) => (
+                            <li key={index} className="flex items-center space-x-2 px-2">
+                                <div className="p-2 flex items-center space-x-2 cursor-pointer w-full rounded-lg hover:bg-[color:var(--backgorund-300)] transition-colors">
+                                    <div className="rounded-full bg-[var(--secondary-background)] flex items-center justify-center w-9 h-9">
+                                        <CommonGenericIcon
+                                            height="20px"
+                                            width="20px"
+                                            imageUrl={item.imageUrl}
+                                            backgroundPosition={item.backgroundPosition}
+                                        />
+                                    </div>
+
+                                    <span className="text-[15px] leading-[1.3333] font-semibold">{item.label}</span>
                                 </div>
                             </li>
                         ))}
