@@ -9,3 +9,7 @@ export interface CommonGenericIconProps {
     imageUrl?: string;
     backgroundPosition?: string;
 }
+
+export interface ModalHeaderProps {
+    text: string;
+}

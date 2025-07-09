@@ -14,6 +14,7 @@ import {
 import SearchMenuIcon from "@/public/generic-icons/search-menu-icon";
 import Divider from "@/components/sub-components/divider";
 import CommonGenericIcon from "@/public/generic-icons/common-generic-icon";
+import ModalHeader from "@/components/sub-components/modal-header";
 interface MenuModalProps {
     isMenuOpen: boolean;
 }
@@ -30,9 +31,7 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
 
     return (
         <div className="fixed top-[52px] right-4 w-[608px] h-[calc(100vh-70px)] bg-[var(--card-background-100)] rounded-lg shadow-xl z-90 overflow-hidden flex flex-col">
-            <div className="py-3.5">
-                <span className="inline-block align-top font-bold text-[24px] leading-[20px] px-4">Menu</span>
-            </div>
+            <ModalHeader text="Menu" />
 
             <div className="overflow-y-auto flex pl-4 gap-4 custom-scrollbar pb-3">
                 {/* Left: Scroll Section */}
