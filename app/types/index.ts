@@ -13,3 +13,7 @@ export interface CommonGenericIconProps {
 export interface ModalHeaderProps {
     text: string;
 }
+
+export interface MessengerModalProps {
+    isMessengerOpen: boolean;
+}
