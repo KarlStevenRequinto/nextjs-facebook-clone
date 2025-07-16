@@ -76,3 +76,8 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease-in-out;
 }
+
+.common-shadow-styling-container {
+    @apply fixed top-[52px] right-4 h-[calc(100vh-70px)] rounded-lg z-90 overflow-hidden flex flex-col;
+    box-shadow: 0 -4px 1.5px -4px rgba(0, 0, 0, 0.2), 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}

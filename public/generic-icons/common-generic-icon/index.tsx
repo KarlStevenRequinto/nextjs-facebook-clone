@@ -1,7 +1,7 @@
 import React from "react";
 import { CommonGenericIconProps } from "@/app/types";
 
-const CommonGenericIcon = ({ width, height, imageUrl, backgroundPosition }: CommonGenericIconProps) => {
+const CommonGenericIcon = ({ width, height, imageUrl, filter, backgroundPosition }: CommonGenericIconProps) => {
     return (
         <i
             data-visualcompletion="css-img"
@@ -14,6 +14,7 @@ const CommonGenericIcon = ({ width, height, imageUrl, backgroundPosition }: Comm
                 height: height,
                 backgroundRepeat: "no-repeat",
                 display: "inline-block",
+                filter: filter,
             }}
         ></i>
     );

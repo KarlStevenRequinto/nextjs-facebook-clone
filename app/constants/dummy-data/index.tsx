@@ -231,3 +231,9 @@ export const menuCreateItemsB = [
         backgroundPosition: "0px -319px",
     },
 ];
+
+export const genericIconLinks = {
+    ellipsis: "https://static.xx.fbcdn.net/rsrc.php/v4/yE/r/AUEjpVUew_a.png",
+    expand: "https://static.xx.fbcdn.net/rsrc.php/v4/yR/r/UB3WKC6bR8I.png",
+    newMsg: "https://static.xx.fbcdn.net/rsrc.php/v4/yR/r/UB3WKC6bR8I.png",
+};
