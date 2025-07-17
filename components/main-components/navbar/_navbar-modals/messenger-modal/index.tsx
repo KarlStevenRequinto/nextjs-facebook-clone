@@ -4,6 +4,7 @@ import { MessengerModalProps } from "@/app/types";
 import CommonGenericIcon from "@/public/generic-icons/common-generic-icon";
 import { genericIconLinks } from "@/app/constants/dummy-data";
 import SearchBar from "@/components/sub-components/search-bar";
+import ChatItems from "@/components/sub-components/chat-items";
 const MessengerModal = ({ isMessengerOpen }: MessengerModalProps) => {
     if (!isMessengerOpen) return null;
     const [activeTab, setActiveTab] = useState("All");
@@ -30,24 +31,40 @@ const MessengerModal = ({ isMessengerOpen }: MessengerModalProps) => {
             {/* All Unread Groups Communities navigation here */}
             <div className="flex gap-2 px-3 py-2">
                 {tabs.map((tab) => (
-                    <button
+                    <div
                         key={tab}
                         onClick={() => setActiveTab(tab)}
-                        className={`text-sm font-medium px-3 py-1 rounded-full ${
-                            activeTab === tab ? "bg-blue-100 text-blue-600" : "text-gray-600 hover:bg-gray-100"
+                        className={`flex items-center justify-center font-medium rounded-full cursor-pointer h-9 px-3 ${
+                            activeTab === tab ? "bg-[var(--secondary-button-background)] text-[var(--blue-100)]" : "hover:bg-[var(--backgorund-300)]"
                         }`}
                     >
                         {tab}
-                    </button>
+                    </div>
                 ))}
             </div>
 
             {/* contents / items here */}
             <div className="p-4">
-                {activeTab === "All" && <div>All Messages</div>}
-                {activeTab === "Unread" && <div>Unread Messages</div>}
-                {activeTab === "Groups" && <div>Group Messages</div>}
-                {activeTab === "Communities" && <div>Community Messages</div>}
+                {activeTab === "All" && (
+                    <div>
+                        <ChatItems />
+                    </div>
+                )}
+                {activeTab === "Unread" && (
+                    <div>
+                        <ChatItems />
+                    </div>
+                )}
+                {activeTab === "Groups" && (
+                    <div>
+                        <ChatItems />
+                    </div>
+                )}
+                {activeTab === "Communities" && (
+                    <div>
+                        <ChatItems />
+                    </div>
+                )}
             </div>
         </div>
     );
