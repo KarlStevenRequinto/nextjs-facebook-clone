@@ -1,10 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import { ChatItemProps } from "@/app/types";
+import NotificationIcon from "@/public/svg/notification-icon";
+import ChatNotifyIcon from "@/public/svg/chat-notify-icon";
 
 const ChatItems = ({}: ChatItemProps) => {
     return (
-        <div className="flex items-center justify-between py-2 hover:bg-[var(--background-300)] rounded-lg cursor-pointer">
+        <div className="flex items-center justify-between px-2 py-2 hover:bg-[var(--background-300)] rounded-lg cursor-pointer">
             {/* Profile Image */}
             <div className="relative w-[56px] h-[56px] flex-shrink-0">
                 <Image src="/images/chat-item-img.jpg" alt="chat-item-img" width={56} height={56} className="rounded-full border border-[#dadde1]" />
@@ -21,6 +23,7 @@ const ChatItems = ({}: ChatItemProps) => {
             {/* Notification icon + mute */}
             <div className="flex flex-col items-end space-y-1 min-w-[40px]">
                 <span className="w-[12px] h-[12px] bg-[var(--blue-100)] rounded-full" />
+                <ChatNotifyIcon />
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 import React from "react";
 
 interface NotificationIconProps {
-    fillColor: string;
+    fillColor?: string;
     width: string;
     height: string;
 }

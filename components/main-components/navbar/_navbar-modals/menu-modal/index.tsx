@@ -146,7 +146,7 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                         <ul className="text-sm mb-2">
                             {menuCreateItemsA.map((item, index) => (
                                 <li key={index} className="flex items-center space-x-2 px-2">
-                                    <div className="p-2 flex items-center space-x-2 cursor-pointer w-full rounded-lg hover:bg-[color:var(--backgorund-300)] transition-colors">
+                                    <div className="p-2 flex items-center space-x-2 cursor-pointer w-full rounded-lg hover:bg-[color:var(--background-300)] transition-colors">
                                         <div className="rounded-full bg-[var(--secondary-background)] flex items-center justify-center w-9 h-9">
                                             <CommonGenericIcon
                                                 height="20px"
@@ -165,7 +165,7 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
                         <ul className="text-sm mt-2">
                             {menuCreateItemsB.map((item, index) => (
                                 <li key={index} className="flex items-center space-x-2 px-2">
-                                    <div className="p-2 flex items-center space-x-2 cursor-pointer w-full rounded-lg hover:bg-[color:var(--backgorund-300)] transition-colors">
+                                    <div className="p-2 flex items-center space-x-2 cursor-pointer w-full rounded-lg hover:bg-[color:var(--background-300)] transition-colors">
                                         <div className="rounded-full bg-[var(--secondary-background)] flex items-center justify-center w-9 h-9">
                                             <CommonGenericIcon
                                                 height="20px"

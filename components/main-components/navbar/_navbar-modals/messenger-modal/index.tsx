@@ -35,7 +35,7 @@ const MessengerModal = ({ isMessengerOpen }: MessengerModalProps) => {
                         key={tab}
                         onClick={() => setActiveTab(tab)}
                         className={`flex items-center justify-center font-medium rounded-full cursor-pointer h-9 px-3 ${
-                            activeTab === tab ? "bg-[var(--secondary-button-background)] text-[var(--blue-100)]" : "hover:bg-[var(--backgorund-300)]"
+                            activeTab === tab ? "bg-[var(--secondary-button-background)] text-[var(--blue-100)]" : "hover:bg-[var(--background-300)]"
                         }`}
                     >
                         {tab}
@@ -44,7 +44,7 @@ const MessengerModal = ({ isMessengerOpen }: MessengerModalProps) => {
             </div>
 
             {/* contents / items here */}
-            <div className="p-4">
+            <div className="p-2">
                 {activeTab === "All" && (
                     <div>
                         <ChatItems />

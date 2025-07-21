@@ -12,7 +12,7 @@ interface MenuItemProps {
 
 const MenuItem = ({ description, title, imgSource, imgWidth, imgHeight, imgStyle }: MenuItemProps) => {
     return (
-        <div className="bg-white flex items-center rounded-lg p-2 hover:bg-[color:var(--backgorund-300)] transition-colors cursor-pointer w-full">
+        <div className="bg-white flex items-center rounded-lg p-2 hover:bg-[color:var(--background-300)] transition-colors cursor-pointer w-full">
             <Image width={imgWidth} height={imgHeight} alt={`${title} Icon`} src={imgSource} style={imgStyle} />
 
             <div className="flex flex-col px-1.5">
