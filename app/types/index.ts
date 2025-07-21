@@ -18,3 +18,13 @@ export interface ModalHeaderProps {
 export interface MessengerModalProps {
     isMessengerOpen: boolean;
 }
+
+export interface ChatItemProps {
+    id?: string;
+    isRead?: boolean;
+    isOnline?: boolean;
+    chatName?: string;
+    chatMessage?: string;
+    isNotificationOn?: boolean;
+    chatImage?: string;
+}
