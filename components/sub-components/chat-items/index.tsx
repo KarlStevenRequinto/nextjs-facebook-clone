@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import { ChatItemProps } from "@/app/types";
-import NotificationIcon from "@/public/svg/notification-icon";
 import ChatNotifyIcon from "@/public/svg/chat-notify-icon";
+import CommonGenericIcon from "@/public/generic-icons/common-generic-icon";
+import { genericIconLinks } from "@/app/constants/dummy-data";
 
 const ChatItems = ({}: ChatItemProps) => {
     return (
-        <div className="flex items-center justify-between px-2 py-2 hover:bg-[var(--background-300)] rounded-lg cursor-pointer">
+        <div className="chat-item-container group relative flex items-center justify-between px-2 py-2 hover:bg-[var(--background-300)] rounded-lg cursor-pointer">
             {/* Profile Image */}
             <div className="relative w-[56px] h-[56px] flex-shrink-0">
                 <Image src="/images/chat-item-img.jpg" alt="chat-item-img" width={56} height={56} className="rounded-full border border-[#dadde1]" />
@@ -21,9 +22,19 @@ const ChatItems = ({}: ChatItemProps) => {
             </div>
 
             {/* Notification icon + mute */}
-            <div className="flex flex-col items-end space-y-1 min-w-[40px]">
+            <div className="flex flex-row items-center space-x-1 min-w-[40px]">
                 <span className="w-[12px] h-[12px] bg-[var(--blue-100)] rounded-full" />
                 <ChatNotifyIcon />
+            </div>
+
+            <div className="hovering-ellipsis hidden group-hover:flex bg-white absolute top-1/2 right-8 -translate-y-1/2 items-center justify-center w-10 h-10 rounded-full shadow-md z-10 border border-[var(--gray-100)] hover:bg-[var(--comment-background)]">
+                <CommonGenericIcon
+                    imageUrl={genericIconLinks.ellipsis}
+                    backgroundPosition="0px -427px"
+                    width="20px"
+                    height="20px"
+                    filter="var(--filter-secondary-icon)"
+                />
             </div>
         </div>
     );

@@ -16,13 +16,31 @@ const MessengerModal = ({ isMessengerOpen }: MessengerModalProps) => {
                 <ModalHeader text="Chats" />
                 <div className="flex items-center">
                     <div>
-                        <CommonGenericIcon imageUrl={genericIconLinks.ellipsis} backgroundPosition="0px -427px" width="20px" height="20px" />
+                        <CommonGenericIcon
+                            imageUrl={genericIconLinks.ellipsis}
+                            backgroundPosition="0px -427px"
+                            width="20px"
+                            height="20px"
+                            filter="var(--filter-secondary-icon)"
+                        />
                     </div>
                     <div>
-                        <CommonGenericIcon imageUrl={genericIconLinks.expand} backgroundPosition="0px -506px" width="20px" height="20px" />
+                        <CommonGenericIcon
+                            imageUrl={genericIconLinks.expand}
+                            backgroundPosition="0px -506px"
+                            width="20px"
+                            height="20px"
+                            filter="var(--filter-secondary-icon)"
+                        />
                     </div>
                     <div>
-                        <CommonGenericIcon imageUrl={genericIconLinks.newMsg} backgroundPosition="-17px -545px" width="20px" height="20px" />
+                        <CommonGenericIcon
+                            imageUrl={genericIconLinks.newMsg}
+                            backgroundPosition="-17px -545px"
+                            width="20px"
+                            height="20px"
+                            filter="var(--filter-secondary-icon)"
+                        />
                     </div>
                 </div>
             </div>
