@@ -32,13 +32,15 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
     return (
         <div className="relative shadow-xl">
             <div className="w-[608px] h-[calc(100vh-70px)] bg-[var(--card-background-100)] common-shadow-styling-container">
-                <ModalHeader text="Menu" />
+                <div className="px-4">
+                    <ModalHeader text="Menu" />
+                </div>
 
                 <div className="overflow-y-auto flex pl-4 gap-4 custom-scrollbar pb-3">
                     {/* Left: Scroll Section */}
 
                     <div className="bg-white shadow-[0_1px_1px_rgba(0,0,0,0.1)] rounded-lg w-[360px] px-2 pt-4 flex-shrink-0 min-h-max border border-gray-200">
-                        <SearchBar />
+                        <SearchBar placeholder="Search Menu" />
 
                         <div className="mb-5">
                             <MenuHeader title="Professional" />

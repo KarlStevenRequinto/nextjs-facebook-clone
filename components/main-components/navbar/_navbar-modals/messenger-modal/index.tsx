@@ -12,39 +12,38 @@ const MessengerModal = ({ isMessengerOpen }: MessengerModalProps) => {
 
     return (
         <div className="w-[360px] bg-white common-shadow-styling-container">
-            <div className="flex items-center justify-between ">
+            <div className="flex items-center justify-between px-4">
                 <ModalHeader text="Chats" />
-                <div className="flex items-center">
-                    <div>
-                        <CommonGenericIcon
-                            imageUrl={genericIconLinks.ellipsis}
-                            backgroundPosition="0px -427px"
-                            width="20px"
-                            height="20px"
-                            filter="var(--filter-secondary-icon)"
-                        />
-                    </div>
-                    <div>
-                        <CommonGenericIcon
-                            imageUrl={genericIconLinks.expand}
-                            backgroundPosition="0px -506px"
-                            width="20px"
-                            height="20px"
-                            filter="var(--filter-secondary-icon)"
-                        />
-                    </div>
-                    <div>
-                        <CommonGenericIcon
-                            imageUrl={genericIconLinks.newMsg}
-                            backgroundPosition="-17px -545px"
-                            width="20px"
-                            height="20px"
-                            filter="var(--filter-secondary-icon)"
-                        />
-                    </div>
+
+                <div className="flex items-center justify-between gap-5 px-1">
+                    <CommonGenericIcon
+                        imageUrl={genericIconLinks.ellipsis}
+                        backgroundPosition="0px -427px"
+                        width="20px"
+                        height="20px"
+                        filter="var(--filter-secondary-icon)"
+                    />
+
+                    <CommonGenericIcon
+                        imageUrl={genericIconLinks.expand}
+                        backgroundPosition="0px -506px"
+                        width="20px"
+                        height="20px"
+                        filter="var(--filter-secondary-icon)"
+                    />
+
+                    <CommonGenericIcon
+                        imageUrl={genericIconLinks.newMsg}
+                        backgroundPosition="-17px -545px"
+                        width="20px"
+                        height="20px"
+                        filter="var(--filter-secondary-icon)"
+                    />
                 </div>
             </div>
-            <SearchBar />
+            <div className="px-2">
+                <SearchBar placeholder="Search Messenger" />
+            </div>
 
             {/* All Unread Groups Communities navigation here */}
             <div className="flex gap-2 px-3 py-2">

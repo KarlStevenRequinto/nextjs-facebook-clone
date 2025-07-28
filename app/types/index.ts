@@ -28,3 +28,7 @@ export interface ChatItemProps {
     isNotificationOn?: boolean;
     chatImage?: string;
 }
+
+export interface SearchBarType {
+    placeholder?: string;
+}

@@ -1,7 +1,8 @@
 import React from "react";
 import CommonGenericIcon from "@/public/generic-icons/common-generic-icon";
+import { SearchBarType } from "@/app/types";
 
-const SearchBar = () => {
+const SearchBar = ({ placeholder }: SearchBarType) => {
     return (
         <div className="flex xl:flex items-center bg-[color:var(--comment-background)] rounded-full h-[36px] mx-2 mb-4">
             <span className="pl-3 h-full flex items-center justify-center">
@@ -15,7 +16,7 @@ const SearchBar = () => {
             </span>
             <input
                 type="text"
-                placeholder="Search menu"
+                placeholder={placeholder}
                 className="h-full w-full rounded-full bg-[var(--comment-background)] outline-none placeholder:text-md placeholder:text-[color:var(--secondary-text)]"
                 style={{
                     color: "var(--primary-black)",
