@@ -32,3 +32,7 @@ export interface ChatItemProps {
 export interface SearchBarType {
     placeholder?: string;
 }
+
+export interface menuHeaderProps {
+    title: string;
+}

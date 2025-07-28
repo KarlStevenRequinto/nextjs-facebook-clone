@@ -8,7 +8,7 @@ import ChatItems from "@/components/sub-components/chat-items";
 const MessengerModal = ({ isMessengerOpen }: MessengerModalProps) => {
     if (!isMessengerOpen) return null;
     const [activeTab, setActiveTab] = useState("All");
-    const tabs = ["All", "Unread", "Groups", "Communities"];
+    const messengerTabs = ["All", "Unread", "Groups", "Communities"];
 
     return (
         <div className="w-[360px] bg-white common-shadow-styling-container">
@@ -47,7 +47,7 @@ const MessengerModal = ({ isMessengerOpen }: MessengerModalProps) => {
 
             {/* All Unread Groups Communities navigation here */}
             <div className="flex gap-2 px-3 py-2">
-                {tabs.map((tab) => (
+                {messengerTabs.map((tab) => (
                     <div
                         key={tab}
                         onClick={() => setActiveTab(tab)}

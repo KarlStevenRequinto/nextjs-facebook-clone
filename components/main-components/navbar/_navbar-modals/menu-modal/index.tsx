@@ -15,13 +15,11 @@ import Divider from "@/components/sub-components/divider";
 import CommonGenericIcon from "@/public/generic-icons/common-generic-icon";
 import ModalHeader from "@/components/sub-components/modal-header";
 import SearchBar from "@/components/sub-components/search-bar";
+import { menuHeaderProps } from "@/app/types";
 interface MenuModalProps {
     isMenuOpen: boolean;
 }
 
-interface menuHeaderProps {
-    title: string;
-}
 const MenuHeader = ({ title }: menuHeaderProps) => {
     return <h3 className="text-[17px] font-medium px-2 mb-2">{title}</h3>;
 };
