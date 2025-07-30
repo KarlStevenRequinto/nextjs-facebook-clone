@@ -43,3 +43,7 @@ export interface ActionBtnProps {
     onClick?: () => void;
     actionBtnStyle?: string;
 }
+
+export interface AccountModalProps {
+    isAccountOpen: boolean;
+}

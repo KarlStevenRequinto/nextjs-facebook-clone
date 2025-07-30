@@ -11,7 +11,7 @@ interface SideBarItemProps {
 
 const SideBarItem = ({ altText, imageSrc, imageWidth, imageHeight, label }: SideBarItemProps) => {
     return (
-        <div className="h-[52px] px-2 flex items-center bg-white hover:bg-[#E4E6EB] rounded-[8px] cursor-pointer">
+        <div className="h-[52px] px-2 flex items-center bg-white hover:bg-[var(--background-300)] rounded-[8px] cursor-pointer">
             <div className="my-2 mr-3">
                 <Image src={imageSrc} alt={altText} width={imageWidth} height={imageHeight} className="object-cover" />
             </div>

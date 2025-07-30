@@ -65,6 +65,20 @@ const MessengerModal = ({ isMessengerOpen }: MessengerModalProps) => {
                 {activeTab === "All" && (
                     <div>
                         <ChatItems />
+                        <ChatItems />
+                        <ChatItems />
+                        <ChatItems />
+                        <ChatItems />
+                        <ChatItems />
+                        <ChatItems />
+                        <ChatItems />
+                        <ChatItems />
+                        <ChatItems />
+                        <ChatItems />
+                        <ChatItems />
+                        <ChatItems />
+                        <ChatItems />
+                        <ChatItems />
                     </div>
                 )}
                 {activeTab === "Unread" && <div>Unread</div>}
