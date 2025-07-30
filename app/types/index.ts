@@ -36,3 +36,10 @@ export interface SearchBarType {
 export interface menuHeaderProps {
     title: string;
 }
+
+export interface ActionBtnProps {
+    title: string;
+    icon?: React.ReactNode;
+    onClick?: () => void;
+    actionBtnStyle?: string;
+}

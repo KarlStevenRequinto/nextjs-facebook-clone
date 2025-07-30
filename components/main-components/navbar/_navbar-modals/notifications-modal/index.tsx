@@ -4,12 +4,14 @@ import CommonGenericIcon from "@/public/generic-icons/common-generic-icon";
 import { genericIconLinks } from "@/app/constants/dummy-data";
 import { menuHeaderProps } from "@/app/types";
 import ChatItems from "@/components/sub-components/chat-items";
+import PostActionButton from "@/components/sub-components/post-action-button";
+import ActionButton from "@/components/sub-components/action-button";
 interface NotificationModalProps {
     isNotificationOpen: boolean;
 }
 
 const MenuHeader = ({ title }: menuHeaderProps) => {
-    return <h3 className="text-[17px] font-medium px-2 mb-2">{title}</h3>;
+    return <h3 className="text-[17px] font-medium px-2">{title}</h3>;
 };
 
 const NotificationModal = ({ isNotificationOpen }: NotificationModalProps) => {
@@ -33,7 +35,7 @@ const NotificationModal = ({ isNotificationOpen }: NotificationModalProps) => {
                 </div>
             </div>
 
-            <div className="flex gap-2 px-3 py-2">
+            <div className="flex gap-2 px-4">
                 {notificationTabs.map((tab) => (
                     <div
                         key={tab}
@@ -47,7 +49,7 @@ const NotificationModal = ({ isNotificationOpen }: NotificationModalProps) => {
                 ))}
             </div>
 
-            <div>
+            <div className="flex gap-2 px-2 mt-2">
                 <MenuHeader title="Earlier" />
                 <span>See all</span>
             </div>
@@ -59,6 +61,10 @@ const NotificationModal = ({ isNotificationOpen }: NotificationModalProps) => {
                     </div>
                 )}
                 {activeTab === "Unread" && <div>Unread</div>}
+            </div>
+
+            <div>
+                <ActionButton title="See previous notifications" />
             </div>
         </div>
     );
