@@ -6,7 +6,7 @@ interface AccountModalProps {
 const AccountModal = ({ isAccountOpen }: AccountModalProps) => {
     if (!isAccountOpen) return null;
 
-    return <div>AccounModal</div>;
+    return <div className="w-[360px] bg-white common-shadow-styling-container">AccounModal</div>;
 };
 
 export default AccountModal;
