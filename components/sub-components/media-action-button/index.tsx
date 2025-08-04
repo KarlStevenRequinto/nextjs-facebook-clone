@@ -16,7 +16,7 @@ const MediaActionButton = ({ altText, imageSrc, imageWidth, imageHeight, label }
             <span className="mr-2">
                 <Image src={imageSrc} alt={altText} width={imageWidth} height={imageHeight} className="object-cover" />
             </span>
-            <div className="label-text">{label}</div>
+            <div>{label}</div>
         </div>
     );
 };

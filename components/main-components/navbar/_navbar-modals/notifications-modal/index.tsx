@@ -11,7 +11,7 @@ interface NotificationModalProps {
 }
 
 const MenuHeader = ({ title }: menuHeaderProps) => {
-    return <h3 className="text-[17px] font-medium px-2">{title}</h3>;
+    return <h3 className="text-[17px] font-medium">{title}</h3>;
 };
 
 const NotificationModal = ({ isNotificationOpen }: NotificationModalProps) => {
@@ -20,7 +20,7 @@ const NotificationModal = ({ isNotificationOpen }: NotificationModalProps) => {
     const notificationTabs = ["All", "Unread"];
 
     return (
-        <div className="w-[360px] bg-white common-shadow-styling-container">
+        <div className="pb-3 w-[360px] bg-white common-shadow-styling-container">
             <div className="flex items-center justify-between px-4">
                 <ModalHeader text="Notifications" />
 
@@ -49,9 +49,9 @@ const NotificationModal = ({ isNotificationOpen }: NotificationModalProps) => {
                 ))}
             </div>
 
-            <div className="flex gap-2 px-2 mt-2">
+            <div className="flex gap-2 px-4 mt-2 justify-between items-center">
                 <MenuHeader title="Earlier" />
-                <span>See all</span>
+                <span className="text-[var(--blue-100)] px-2 py-1.5 rounded-[4px] hover:bg-[var(--background-300)] cursor-pointer">See all</span>
             </div>
 
             <div className="p-2">

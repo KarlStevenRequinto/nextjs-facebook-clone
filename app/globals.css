@@ -9,6 +9,7 @@
     --background-200: #d9dcdf;
     --background-300: rgba(0, 0, 0, 0.05);
     --secondary-background: #e2e5e9;
+    --secondary-background-100: #d6d9dd;
     --foreground: #171717;
     --web-wash: #f2f4f7;
     --primary-black: #080809;
@@ -50,7 +51,7 @@ body {
 }
 
 .label-text {
-    color: var(--secondary-text);
+    /* color: var(--secondary-text); */
     font-weight: 500;
     line-height: 1.3333;
 }
