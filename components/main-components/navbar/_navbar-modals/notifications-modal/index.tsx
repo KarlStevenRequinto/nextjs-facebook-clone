@@ -19,7 +19,7 @@ const NotificationModal = ({ isNotificationOpen }: NotificationModalProps) => {
     const notificationTabs = ["All", "Unread"];
 
     return (
-        <div className="pb-3 w-[360px] bg-white common-shadow-styling-container">
+        <div className="pb-3 w-[360px] bg-white common-shadow-styling-container shadow-100 ">
             <div className="flex items-center justify-between px-4">
                 <ModalHeader text="Notifications" />
 

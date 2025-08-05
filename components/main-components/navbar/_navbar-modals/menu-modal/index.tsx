@@ -29,7 +29,7 @@ const MenuModal = ({ isMenuOpen }: MenuModalProps) => {
 
     return (
         <div className="relative shadow-xl">
-            <div className="w-[608px] h-[calc(100vh-70px)] bg-[var(--card-background-100)] common-shadow-styling-container">
+            <div className="w-[608px] h-[calc(100vh-70px)] bg-[var(--card-background-100)] common-shadow-styling-container shadow-100">
                 <div className="px-4">
                     <ModalHeader text="Menu" />
                 </div>

@@ -11,7 +11,7 @@ const MessengerModal = ({ isMessengerOpen }: MessengerModalProps) => {
     const messengerTabs = ["All", "Unread", "Groups", "Communities"];
 
     return (
-        <div className="w-[360px] bg-white common-shadow-styling-container">
+        <div className="w-[360px] bg-white common-shadow-styling-container shadow-100">
             <div className="flex items-center justify-between px-4">
                 <ModalHeader text="Chats" />
 

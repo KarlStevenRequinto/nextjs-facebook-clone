@@ -85,11 +85,14 @@ body {
 .common-shadow-styling-container {
     @apply fixed top-[52px] right-4 rounded-lg z-90 overflow-auto flex flex-col;
     max-height: calc(100vh - 70px);
-    box-shadow: 0 -4px 1.5px -4px rgba(0, 0, 0, 0.2), 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
 
 .shadow-100 {
     box-shadow: 0 -4px 1.5px -4px rgba(0, 0, 0, 0.2), 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-200 {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 }
 
 .chat-item-container:has(.hovering-ellipsis:hover) {
