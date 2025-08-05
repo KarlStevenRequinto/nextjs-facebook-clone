@@ -1,7 +1,15 @@
+"use client";
 import CommonGenericIcon from "@/components/sub-components/icon-components/generic-icons";
-import React from "react";
+import RotatingArrowIcon from "@/components/sub-components/icon-components/rotating-arrow-icon";
+import React, { useState } from "react";
 
 const WatchPage = () => {
+    const [angle, setAngle] = useState(0);
+
+    const handleHover = () => {
+        setAngle((prev) => prev + 180); // add 180° on each hover
+    };
+
     return (
         <div>
             <CommonGenericIcon
@@ -34,6 +42,8 @@ const WatchPage = () => {
                     </g>
                 </svg>
             </div>
+
+            <RotatingArrowIcon width="32" height="32" handleHover={handleHover} angle={angle} />
         </div>
     );
 };

@@ -2,21 +2,22 @@ import React from "react";
 
 interface RotatingArrowProps {
     handleHover: () => void;
-    isRotated: boolean;
+    angle: number;
     width?: string | number;
     height?: string | number;
 }
 
-const RotatingArrowIcon = ({ handleHover, isRotated, width, height }: RotatingArrowProps) => {
+const RotatingArrowIcon = ({ handleHover, angle, width, height }: RotatingArrowProps) => {
     return (
         <div onMouseEnter={handleHover} className="w-fit cursor-pointer">
             <svg
                 viewBox="0 0 20 20"
                 width={width}
-                height={width}
+                height={height}
                 fill="currentColor"
                 aria-hidden="true"
-                className={`transition-transform duration-300 ease-in-out ${isRotated ? "rotate-180" : "rotate-0"}`}
+                style={{ transform: `rotate(${angle}deg)` }}
+                className="transition-transform duration-300 ease-in-out"
             >
                 <g fillRule="evenodd" transform="translate(-446 -398)">
                     <g fillRule="nonzero">
