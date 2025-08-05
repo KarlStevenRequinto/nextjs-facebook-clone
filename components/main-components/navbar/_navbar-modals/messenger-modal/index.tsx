@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ModalHeader from "@/components/sub-components/modal-header";
 import { MessengerModalProps } from "@/app/types";
-import CommonGenericIcon from "@/public/generic-icons/common-generic-icon";
+import CommonGenericIcon from "@/public/generic-icons";
 import { genericIconLinks } from "@/app/constants/dummy-data";
 import SearchBar from "@/components/sub-components/search-bar";
 import ChatItems from "@/components/sub-components/chat-items";

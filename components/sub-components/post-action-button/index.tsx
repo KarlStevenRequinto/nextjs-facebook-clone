@@ -1,4 +1,4 @@
-import LikeIcon from "@/public/generic-icons/like-icon";
+import CommonGenericIcon from "@/public/generic-icons";
 import React from "react";
 
 const PostActionButton = () => {
@@ -8,7 +8,12 @@ const PostActionButton = () => {
             style={{ width: "clamp(160px, 16.875vw, 216px)" }}
         >
             <div className="px-1 py-[6px]">
-                <LikeIcon />
+                <CommonGenericIcon
+                    imageUrl="https://static.xx.fbcdn.net/rsrc.php/v4/y6/r/olX2yf1iinG.png"
+                    backgroundPosition="0px -798px"
+                    height="20px"
+                    width="20px"
+                />
             </div>
 
             <span className="px-1 py-[6px]">Like</span>

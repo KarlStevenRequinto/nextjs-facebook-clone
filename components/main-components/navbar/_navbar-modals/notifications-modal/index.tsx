@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import ModalHeader from "@/components/sub-components/modal-header";
-import CommonGenericIcon from "@/public/generic-icons/common-generic-icon";
+import CommonGenericIcon from "@/public/generic-icons";
 import { genericIconLinks } from "@/app/constants/dummy-data";
 import { menuHeaderProps } from "@/app/types";
 import ChatItems from "@/components/sub-components/chat-items";
-import PostActionButton from "@/components/sub-components/post-action-button";
 import ActionButton from "@/components/sub-components/action-button";
 interface NotificationModalProps {
     isNotificationOpen: boolean;

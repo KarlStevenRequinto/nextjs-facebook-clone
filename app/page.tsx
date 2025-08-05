@@ -1,8 +1,13 @@
+import ActionButton from "@/components/sub-components/action-button";
+import ActionIcons from "@/components/sub-components/action-icons";
+import ChatItems from "@/components/sub-components/chat-items";
 import MediaActionButton from "@/components/sub-components/media-action-button";
 import MenuItem from "@/components/sub-components/menu-item";
+import ModalHeader from "@/components/sub-components/modal-header";
 import PostActionButton from "@/components/sub-components/post-action-button";
 import SearchItem from "@/components/sub-components/search-item";
 import SideBarItem from "@/components/sub-components/sidebar-item";
+import MenuIcon from "@/public/svg/menu-icon";
 
 export default function Home() {
     return (
@@ -18,6 +23,9 @@ export default function Home() {
                 imgWidth={36}
                 imgHeight={36}
             />
+            <ActionButton title="ActionButton" />
+            <ChatItems />
+            <ModalHeader text="Modal Header" />
         </div>
     );
 }

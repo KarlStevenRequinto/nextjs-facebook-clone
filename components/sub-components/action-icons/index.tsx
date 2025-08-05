@@ -4,7 +4,7 @@ interface ActionIconsProps {
     icon?: React.ReactNode;
     iconHeight?: number;
     iconWidth?: number;
-    onClickIcon: () => void;
+    onClickIcon?: () => void;
     isActive?: boolean;
 }
 

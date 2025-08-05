@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { ChatItemProps } from "@/app/types";
 import ChatNotifyIcon from "@/public/svg/chat-notify-icon";
-import CommonGenericIcon from "@/public/generic-icons/common-generic-icon";
+import CommonGenericIcon from "@/public/generic-icons";
 import { genericIconLinks } from "@/app/constants/dummy-data";
 
 const ChatItems = ({}: ChatItemProps) => {

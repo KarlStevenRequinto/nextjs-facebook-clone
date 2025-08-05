@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import SearchIcon from "@/public/svg/search-icon";
@@ -21,6 +21,7 @@ import MenuModal from "./_navbar-modals/menu-modal";
 import MessengerModal from "./_navbar-modals/messenger-modal";
 import NotificationModal from "./_navbar-modals/notifications-modal";
 import AccountModal from "./_navbar-modals/account-modal";
+import CommonGenericIcon from "@/public/generic-icons";
 
 const Navbar = () => {
     const {

@@ -1,5 +1,5 @@
 import React from "react";
-import CommonGenericIcon from "@/public/generic-icons/common-generic-icon";
+import CommonGenericIcon from "@/public/generic-icons";
 import { SearchBarType } from "@/app/types";
 
 const SearchBar = ({ placeholder }: SearchBarType) => {

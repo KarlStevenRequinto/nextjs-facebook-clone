@@ -12,7 +12,7 @@ import {
     menuSocialItems,
 } from "@/app/constants/dummy-data";
 import Divider from "@/components/sub-components/divider";
-import CommonGenericIcon from "@/public/generic-icons/common-generic-icon";
+import CommonGenericIcon from "@/public/generic-icons";
 import ModalHeader from "@/components/sub-components/modal-header";
 import SearchBar from "@/components/sub-components/search-bar";
 import { menuHeaderProps } from "@/app/types";
