@@ -1,4 +1,4 @@
-import CommonGenericIcon from "@/public/generic-icons";
+import CommonGenericIcon from "../icon-components/generic-icons";
 import React from "react";
 
 const PostActionButton = () => {

@@ -21,7 +21,6 @@ import MenuModal from "./_navbar-modals/menu-modal";
 import MessengerModal from "./_navbar-modals/messenger-modal";
 import NotificationModal from "./_navbar-modals/notifications-modal";
 import AccountModal from "./_navbar-modals/account-modal";
-import CommonGenericIcon from "@/public/generic-icons";
 
 const Navbar = () => {
     const {
