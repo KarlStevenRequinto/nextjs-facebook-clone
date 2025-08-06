@@ -1,3 +1,5 @@
+import { url } from "inspector";
+
 export const menuProfessionalItems = [
     {
         title: "Ads Manager",
@@ -237,3 +239,99 @@ export const genericIconLinks = {
     expand: "https://static.xx.fbcdn.net/rsrc.php/v4/yR/r/UB3WKC6bR8I.png",
     newMsg: "https://static.xx.fbcdn.net/rsrc.php/v4/yR/r/UB3WKC6bR8I.png",
 };
+
+export const accountModalItems = [
+    {
+        id: "mbs",
+        text: "Meta Business Suite",
+        leftIcon: {
+            url: "https://static.xx.fbcdn.net/rsrc.php/v4/yr/r/uKFDlQgEw6u.png",
+            iconWidth: 20,
+            iconHeight: 20,
+            iconPosition: "0px -71px",
+        },
+        rightIcon: {
+            url: "https://static.xx.fbcdn.net/rsrc.php/v4/yr/r/uKFDlQgEw6u.png",
+            iconWidth: 24,
+            iconHeight: 24,
+            iconPosition: "0px 0px",
+        },
+        subText: null,
+    },
+    {
+        id: "snp",
+        text: "Settings & privacy",
+        leftIcon: {
+            url: "https://static.xx.fbcdn.net/rsrc.php/v4/yG/r/r9cO3NyCeiP.png",
+            iconWidth: 20,
+            iconHeight: 20,
+            iconPosition: "0px -620px",
+        },
+        rightIcon: {
+            url: "https://static.xx.fbcdn.net/rsrc.php/v4/yG/r/r9cO3NyCeiP.png",
+            iconWidth: 24,
+            iconHeight: 24,
+            iconPosition: "0px -100px",
+        },
+        subText: null,
+    },
+    {
+        id: "hns",
+        text: "Help & support",
+        leftIcon: {
+            url: "https://static.xx.fbcdn.net/rsrc.php/v4/yr/r/uKFDlQgEw6u.png",
+            iconWidth: 20,
+            iconHeight: 20,
+            iconPosition: "0px -239px",
+        },
+        rightIcon: {
+            url: "https://static.xx.fbcdn.net/rsrc.php/v4/yG/r/r9cO3NyCeiP.png",
+            iconWidth: 24,
+            iconHeight: 24,
+            iconPosition: "0px -100px",
+        },
+        subText: null,
+    },
+
+    {
+        id: "dna",
+        text: "Display & accessibility",
+        leftIcon: {
+            url: "https://static.xx.fbcdn.net/rsrc.php/v4/y6/r/41KDhGPj6ng.png",
+            iconWidth: 20,
+            iconHeight: 20,
+            iconPosition: "0px -184px",
+        },
+        rightIcon: {
+            url: "https://static.xx.fbcdn.net/rsrc.php/v4/yG/r/r9cO3NyCeiP.png",
+            iconWidth: 24,
+            iconHeight: 24,
+            iconPosition: "0px -100px",
+        },
+        subText: null,
+    },
+    {
+        id: "gf",
+        text: "Give feedback",
+        leftIcon: {
+            url: "https://static.xx.fbcdn.net/rsrc.php/v4/y6/r/41KDhGPj6ng.png",
+            iconWidth: 20,
+            iconHeight: 20,
+            iconPosition: "0px -142px",
+        },
+        rightIcon: null,
+        subText: "CTRL B",
+    },
+    {
+        id: "logout",
+        text: "Log Out",
+        leftIcon: {
+            url: "https://static.xx.fbcdn.net/rsrc.php/v4/y6/r/41KDhGPj6ng.png",
+            iconWidth: 20,
+            iconHeight: 20,
+            iconPosition: "0px -163px",
+        },
+        rightIcon: null,
+        subText: null,
+    },
+];

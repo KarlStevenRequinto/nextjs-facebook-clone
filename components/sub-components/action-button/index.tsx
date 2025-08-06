@@ -4,7 +4,7 @@ import { ActionBtnProps } from "@/app/types";
 const ActionButton = ({ title, actionBtnStyle }: ActionBtnProps) => {
     return (
         <div
-            className={`mx-4 px-3 h-9 rounded-[8px] flex items-center justify-center label-text text-[var(--primary-black)] bg-[var(--secondary-background)] hover:bg-[color:var(--secondary-background-100)] cursor-pointer ${
+            className={`px-3 h-9 rounded-[8px] flex items-center justify-center label-text text-[var(--primary-black)] bg-[var(--secondary-background)] hover:bg-[color:var(--secondary-background-100)] cursor-pointer ${
                 actionBtnStyle ?? ""
             }`}
         >

@@ -7,12 +7,18 @@ import ModalHeader from "@/components/sub-components/modal-header";
 import PostActionButton from "@/components/sub-components/post-action-button";
 import SearchItem from "@/components/sub-components/search-item";
 import SideBarItem from "@/components/sub-components/sidebar-item";
-import MenuIcon from "@/public/svg/menu-icon";
 
 export default function Home() {
     return (
         <div className="flex items-center justify-center h-full gap-4 flex-col">
-            <SideBarItem altText="test alt" imageSrc="/icons/facebook-icon.png" imageWidth={36} imageHeight={36} label="Lerd Robott" />
+            <SideBarItem
+                isLeftIcon={false}
+                leftIconAltText="test alt"
+                leftIconUrl="/icons/facebook-icon.png"
+                leftIconHeight={36}
+                leftIconWidth={36}
+                label="Lerd Robott"
+            />
             <MediaActionButton altText="test alt" imageSrc="/icons/live-video-icon.png" imageWidth={24} imageHeight={24} label="Live video" />
             <PostActionButton />
             <SearchItem />
