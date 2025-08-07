@@ -1,15 +1,16 @@
+import Image from "next/image";
 import React from "react";
 
 interface RotatingArrowProps {
-    handleHover: () => void;
     angle: number;
     width?: string | number;
     height?: string | number;
+    image: string;
 }
 
-const RotatingArrowIcon = ({ handleHover, angle, width, height }: RotatingArrowProps) => {
+const RotatingArrowIcon = ({ angle, width, height, image }: RotatingArrowProps) => {
     return (
-        <div onMouseEnter={handleHover} className="w-fit cursor-pointer">
+        <div className="w-fit cursor-pointer relative">
             <svg
                 viewBox="0 0 20 20"
                 width={width}
@@ -32,6 +33,13 @@ const RotatingArrowIcon = ({ handleHover, angle, width, height }: RotatingArrowP
                     </g>
                 </g>
             </svg>
+            <Image
+                src={image}
+                alt="center icon"
+                className="absolute top-1/2 left-1/2 w-4 h-4 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                width={20}
+                height={20}
+            />
         </div>
     );
 };

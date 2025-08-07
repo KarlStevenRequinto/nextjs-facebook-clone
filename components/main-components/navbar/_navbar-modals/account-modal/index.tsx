@@ -5,6 +5,7 @@ import ActionButton from "@/components/sub-components/action-button";
 import { AccountModalProps } from "@/app/types";
 import { accountModalItems } from "@/app/constants/dummy-data";
 import CommonGenericIcon from "@/components/sub-components/icon-components/generic-icons";
+import ProfilePageItem from "@/components/sub-components/profile-page-item";
 
 const AccountModal = ({ isAccountOpen }: AccountModalProps) => {
     if (!isAccountOpen) return null;
@@ -24,29 +25,26 @@ const AccountModal = ({ isAccountOpen }: AccountModalProps) => {
                     <Divider />
                 </div>
 
-                <SideBarItem
-                    isLeftIcon={false}
-                    leftIconAltText="test alt"
-                    leftIconUrl="/icons/facebook-icon.png"
-                    leftIconHeight={36}
-                    leftIconWidth={36}
-                    label="Lerd Robott"
-                />
-                <SideBarItem
-                    isLeftIcon={false}
-                    leftIconAltText="test alt"
-                    leftIconUrl="/icons/facebook-icon.png"
-                    leftIconHeight={36}
-                    leftIconWidth={36}
-                    label="Lerd Robott"
-                />
+                <ProfilePageItem label="Kilos At Gawa" image="/icons/facebook-icon.png" />
+                <ProfilePageItem label="Lanky Nation Gaming" image="/icons/facebook-icon.png" />
 
                 <div className="py-1">
                     <Divider />
                 </div>
 
-                <div className="my-2">
-                    <ActionButton title="See all profiles" actionBtnStyle={"mx-2"} />
+                <div className="my-2 ">
+                    <ActionButton
+                        title="See all profiles"
+                        actionBtnStyle={"mx-2"}
+                        icon={
+                            <CommonGenericIcon
+                                imageUrl="https://static.xx.fbcdn.net/rsrc.php/v4/yr/r/uKFDlQgEw6u.png"
+                                backgroundPosition="0px -302px"
+                                width="16px"
+                                height="16px"
+                            />
+                        }
+                    />
                 </div>
             </div>
 
