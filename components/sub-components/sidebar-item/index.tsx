@@ -16,6 +16,7 @@ interface SideBarItemProps {
     rightIconWidth?: number | string;
     rightIconHeight?: number | string;
     label?: string;
+    subText?: string;
 }
 
 const SideBarItem = ({
@@ -27,19 +28,16 @@ const SideBarItem = ({
     leftIconWidth,
     leftIconHeight,
     label,
+    subText,
     rightIconWidth,
     rightIconHeight,
     rightIconbgPosition,
 }: SideBarItemProps) => {
     const showRightIcon = !!rightIconUrl && typeof rightIconWidth !== "undefined" && typeof rightIconHeight !== "undefined";
-    console.log("isLeftIcon: ", isLeftIcon);
-    console.log("leftIconbgPosition: ", leftIconbgPosition);
-    console.log("leftIconUrl: ", leftIconUrl);
-    console.log("leftIconWidth: ", leftIconWidth);
-    console.log("leftIconHeight: ", leftIconHeight);
+
     return (
-        <div className="h-[52px] px-2 flex items-center bg-white hover:bg-[var(--background-300)] rounded-[8px] cursor-pointer">
-            <div className="my-2 mr-3">
+        <div className="h-[52px] px-2 flex items-center hover:bg-[var(--background-300)] rounded-[8px] cursor-pointer ">
+            <div className="my-2 mr-3 flex items-center">
                 {isLeftIcon ? (
                     <CommonGenericIcon
                         imageUrl={leftIconUrl}
@@ -60,17 +58,21 @@ const SideBarItem = ({
                     )
                 )}
             </div>
-            <div className="w-[223px] text-[color:var(--primary-black)] font-medium leading-[1.3333]">{label}</div>
-            {showRightIcon && (
-                <div className="ml-auto">
+            <div className="flex flex-col">
+                <div className="w-[223px] text-[color:var(--primary-black)] font-medium leading-[1.3333]">{label}</div>
+                {subText && <span>{subText}</span>}
+            </div>
+
+            <div className="ml-auto flex items-center">
+                {showRightIcon && (
                     <CommonGenericIcon
                         imageUrl={rightIconUrl}
-                        width={`${String(leftIconWidth)}px`}
-                        height={`${String(leftIconHeight)}px`}
+                        width={`${String(rightIconWidth)}px`}
+                        height={`${String(rightIconHeight)}px`}
                         backgroundPosition={rightIconbgPosition}
                     />
-                </div>
-            )}
+                )}
+            </div>
         </div>
     );
 };

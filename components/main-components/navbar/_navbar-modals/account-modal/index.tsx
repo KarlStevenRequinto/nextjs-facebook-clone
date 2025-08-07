@@ -4,6 +4,7 @@ import Divider from "@/components/sub-components/divider";
 import ActionButton from "@/components/sub-components/action-button";
 import { AccountModalProps } from "@/app/types";
 import { accountModalItems } from "@/app/constants/dummy-data";
+import CommonGenericIcon from "@/components/sub-components/icon-components/generic-icons";
 
 const AccountModal = ({ isAccountOpen }: AccountModalProps) => {
     if (!isAccountOpen) return null;
@@ -55,8 +56,9 @@ const AccountModal = ({ isAccountOpen }: AccountModalProps) => {
                     return (
                         <SideBarItem
                             key={index}
-                            isLeftIcon={false}
+                            isLeftIcon={true}
                             leftIconbgPosition={item.leftIcon.iconPosition}
+                            leftIconUrl={item.leftIcon.url}
                             leftIconWidth={item.leftIcon.iconWidth}
                             leftIconHeight={item.leftIcon.iconHeight}
                             rightIconUrl={item.rightIcon?.url ?? undefined}
@@ -64,11 +66,29 @@ const AccountModal = ({ isAccountOpen }: AccountModalProps) => {
                             rightIconHeight={item.rightIcon?.iconHeight ?? undefined}
                             rightIconbgPosition={item.rightIcon?.iconPosition ?? undefined}
                             label={item.text}
+                            subText={item.subText ?? undefined}
                         />
                     );
                 })}
 
-                <span>Privacy Terms Advertising Ad Choices Cookies More Meta © 2025</span>
+                <div>
+                    <a>Privacy</a>
+                    <span>·</span>
+                    <a>Terms</a>
+                    <span>·</span>
+                    <a>Advertising</a>
+                    <span>·</span> <a>Ad Choices</a>
+                    <CommonGenericIcon
+                        imageUrl="https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/g7l6EV9FO6y.png"
+                        backgroundPosition="0px -929px"
+                        width="12px"
+                        height="12px"
+                    />
+                    <span>·</span> <a>Cookies</a>
+                    <span>·</span>
+                    <a>More</a>
+                    <span>·</span>Meta © 2025
+                </div>
             </div>
         </div>
     );

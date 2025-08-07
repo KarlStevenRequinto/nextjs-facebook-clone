@@ -2,14 +2,11 @@ import React from "react";
 import { CommonGenericIconProps } from "@/app/types";
 
 const CommonGenericIcon = ({ width, height, imageUrl, filter, backgroundPosition }: CommonGenericIconProps) => {
-    console.log("CommonGenericIcon - imageUrl: ", imageUrl);
-    console.log("CommonGenericIcon - backgroundPosition: ", backgroundPosition);
-    console.log("CommonGenericIcon - width: ", width);
-    console.log("CommonGenericIcon - height: ", height);
     return (
         <i
             data-visualcompletion="css-img"
             aria-hidden="true"
+            className="flex items-center justify-center"
             style={{
                 backgroundImage: `url("${imageUrl}")`,
                 backgroundPosition: backgroundPosition,
