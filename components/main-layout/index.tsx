@@ -52,11 +52,11 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
     };
     return (
         <div className="flex flex-1 overflow-hidden">
-            <aside className="w-[280px] bg-amber-200 overflow-y-auto hidden md:block">{leftSidebar()}</aside>
+            <aside className="w-[360px] overflow-y-auto hidden md:block">{leftSidebar()}</aside>
 
             <main className="flex-1 overflow-y-auto">{children}</main>
 
-            <aside className="w-[280px] bg-amber-200 overflow-y-auto hidden lg:block">{rightSidebar()}</aside>
+            <aside className="w-[360px] bg-amber-200 overflow-y-auto hidden lg:block">{rightSidebar()}</aside>
         </div>
     );
 };

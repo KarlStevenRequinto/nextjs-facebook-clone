@@ -335,3 +335,37 @@ export const accountModalItems = [
         subText: null,
     },
 ];
+
+export const homeSideBarItems = [
+    {
+        label: "Lerd Robott",
+        iconUrl:
+            "https://scontent.fceb2-1.fna.fbcdn.net/v/t39.30808-1/458566008_8748899975120715_8318957847811799003_n.jpg?stp=c0.459.1366.1366a_cp0_dst-jpg_s40x40_tt6&_nc_cat=103&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=6cXAjhKMdx8Q7kNvwFCgNza&_nc_oc=Adksjdwf8Aa3qTAw34cuL6TYq7sXIwgewiiQUAx6HdBrSKlWE2yUG8oqULM20wInV_CISjAJHCzJzGSFH9DKXxgy&_nc_zt=24&_nc_ht=scontent.fceb2-1.fna&_nc_gid=7CKDt4gZLfMPjma9-JYoHw&oh=00_AfVgu5S-_hvHf0HG4-ANeJoDiUsZzsZFyuVZxG-iFguljg&oe=689B8F24",
+    },
+    { label: "Meta AI", iconUrl: "/images/meta-ai.png" },
+    { label: "Friends", iconUrl: "/images/friends.png" },
+    { label: "Professional dashboard", iconUrl: "/images/pro-dashboard.png" },
+    { label: "Feeds", iconUrl: "/images/feeds.png" },
+    { label: "Groups", iconUrl: "/images/groups.png" },
+    { label: "Marketplace", iconUrl: "/images/marketplace.png" },
+    { label: "Ad Center", iconUrl: "/images/ad-center.png" },
+    { label: "Ads Manager", iconUrl: "/images/ads-manager.png" },
+    { label: "Birthdays", iconUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yq/r/MKwrVp_7k1D.png" },
+    { label: "Climate Science Center", iconUrl: "/images/climate-science-center.png" },
+    { label: "Crisis response", iconUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yq/r/fNPcDZC-2PD.png" },
+    { label: "Events", iconUrl: "/images/events.png" },
+    { label: "Fundraisers", iconUrl: "/images/fundraisers.png" },
+    { label: "Gaming Video", iconUrl: "/images/gaming-video.png" },
+    { label: "Memories", iconUrl: "/images/memories.png" },
+    // { label: "Messenger", iconUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yw/r/SGrKWNlooEf.png" },
+    { label: "Messenger Kids", iconUrl: "/images/messenger-kids.png" },
+    { label: "Meta Business Suite", iconUrl: "/images/meta-business-suite.png" },
+    { label: "Orders and payments", iconUrl: "/images/orders-payments.png" },
+    { label: "Pages", iconUrl: "/images/pages.png" },
+    { label: "Play games", iconUrl: "/images/play-games.png" },
+    { label: "Recent ad activity", iconUrl: "/images/recent-ad-activity.png" },
+    // { label: "Reels", iconUrl: "https://static.xx.fbcdn.net/rsrc.php/v4/yA/r/FVAeV5GPLIk.png" },
+    { label: "Saved", iconUrl: "/images/saved.png" },
+    { label: "Video", iconUrl: "/images/video.png" },
+    { label: "See less", iconUrl: "/images/video.png" },
+];

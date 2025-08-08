@@ -53,7 +53,7 @@ const SideBarItem = ({
                             alt={leftIconAltText}
                             width={typeof leftIconWidth === "number" ? leftIconWidth : parseInt(leftIconWidth)}
                             height={typeof leftIconHeight === "number" ? leftIconHeight : parseInt(leftIconHeight)}
-                            className="object-cover"
+                            className="object-cover rounded-full"
                         />
                     )
                 )}
