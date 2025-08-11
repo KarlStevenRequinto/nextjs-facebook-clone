@@ -4,6 +4,7 @@ import CommonGenericIcon from "../icon-components/generic-icons";
 
 interface SideBarItemProps {
     isLeftIcon: boolean;
+    isSVG: boolean;
     leftIconbgPosition?: string;
     leftIconUrl?: string;
     leftIconAltText?: string;
@@ -17,10 +18,12 @@ interface SideBarItemProps {
     rightIconHeight?: number | string;
     label?: string;
     subText?: string;
+    svgIcon?: React.ReactNode;
 }
 
 const SideBarItem = ({
     isLeftIcon,
+    isSVG,
     leftIconbgPosition,
     leftIconAltText,
     leftIconUrl,
@@ -32,19 +35,24 @@ const SideBarItem = ({
     rightIconWidth,
     rightIconHeight,
     rightIconbgPosition,
+    svgIcon,
 }: SideBarItemProps) => {
     const showRightIcon = !!rightIconUrl && typeof rightIconWidth !== "undefined" && typeof rightIconHeight !== "undefined";
-
+    console.log("LeftSideBarItem", svgIcon);
     return (
         <div className="h-[52px] px-2 flex items-center hover:bg-[var(--background-300)] rounded-[8px] cursor-pointer ">
             <div className="my-2 mr-3 flex items-center">
                 {isLeftIcon ? (
-                    <CommonGenericIcon
-                        imageUrl={leftIconUrl}
-                        backgroundPosition={leftIconbgPosition}
-                        width={`${String(leftIconWidth)}px`}
-                        height={`${String(leftIconHeight)}px`}
-                    />
+                    isSVG ? (
+                        svgIcon
+                    ) : (
+                        <CommonGenericIcon
+                            imageUrl={leftIconUrl}
+                            backgroundPosition={leftIconbgPosition}
+                            width={`${String(leftIconWidth)}px`}
+                            height={`${String(leftIconHeight)}px`}
+                        />
+                    )
                 ) : (
                     leftIconUrl &&
                     leftIconAltText && (
