@@ -50,7 +50,6 @@ const AccountModal = ({ isAccountOpen }: AccountModalProps) => {
 
             <div className="pt-4">
                 {accountModalItems.map((item, index) => {
-                    console.log("item.rightIconWidth: ", item.rightIcon?.iconWidth ?? "no right icon");
                     return (
                         <SideBarItem
                             key={index}

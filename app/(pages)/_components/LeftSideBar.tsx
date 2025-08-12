@@ -1,5 +1,7 @@
 import { homeSideBarItems } from "@/app/constants/dummy-data";
+import Divider from "@/components/sub-components/divider";
 import SideBarItem from "@/components/sub-components/sidebar-item";
+import ChevronDownIcon from "@/public/svg/chevron-down-icon";
 import ChevronUpIcon from "@/public/svg/chevron-up-icon";
 import React, { useState, useMemo } from "react";
 
@@ -16,7 +18,7 @@ const LeftSideBar = () => {
     const chevronIcon = (
         <div className="w-[36px] h-[36px] bg-[var(--secondary-background)] flex items-center justify-center rounded-full">
             <div className={`${expanded ? "" : "rotate-180"} transition-transform`}>
-                <ChevronUpIcon width="20" height="20" />
+                {expanded ? <ChevronUpIcon width="20" height="20" /> : <ChevronDownIcon width="20" height="20" />}
             </div>
         </div>
     );
@@ -45,6 +47,7 @@ const LeftSideBar = () => {
                 label={expanded ? "See less" : "See more"}
                 onClick={() => setExpanded((v) => !v)}
             />
+            <Divider />
         </div>
     );
 };

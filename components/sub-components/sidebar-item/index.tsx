@@ -4,7 +4,7 @@ import CommonGenericIcon from "../icon-components/generic-icons";
 
 interface SideBarItemProps {
     isLeftIcon: boolean;
-    isSVG: boolean;
+    isSVG?: boolean;
     leftIconbgPosition?: string;
     leftIconUrl?: string;
     leftIconAltText?: string;
@@ -41,7 +41,6 @@ const SideBarItem = ({
     onClick,
 }: SideBarItemProps) => {
     const showRightIcon = !!rightIconUrl && typeof rightIconWidth !== "undefined" && typeof rightIconHeight !== "undefined";
-    console.log("LeftSideBarItem", svgIcon);
     return (
         <div
             className="h-[52px] px-2 flex items-center hover:bg-[var(--background-300)] rounded-[8px] cursor-pointer"
