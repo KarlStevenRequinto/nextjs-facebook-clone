@@ -1,19 +1,29 @@
 import { homeSideBarItems } from "@/app/constants/dummy-data";
 import SideBarItem from "@/components/sub-components/sidebar-item";
 import ChevronUpIcon from "@/public/svg/chevron-up-icon";
-import React from "react";
+import React, { useState, useMemo } from "react";
 
 const LeftSideBar = () => {
+    const [expanded, setExpanded] = useState(true); // show all by default
+
+    const cutoffIndex = useMemo(() => {
+        const idx = homeSideBarItems.findIndex((i) => i.label === "Marketplace");
+        return idx === -1 ? homeSideBarItems.length - 1 : idx;
+    }, []);
+
+    const visibleItems = expanded ? homeSideBarItems : homeSideBarItems.slice(0, cutoffIndex + 1);
+
     const chevronIcon = (
         <div className="w-[36px] h-[36px] bg-[var(--secondary-background)] flex items-center justify-center rounded-full">
-            <ChevronUpIcon width="20" height="20" />
+            <div className={`${expanded ? "" : "rotate-180"} transition-transform`}>
+                <ChevronUpIcon width="20" height="20" />
+            </div>
         </div>
     );
     return (
         <div className="mt-4 px-2">
-            {homeSideBarItems.map((item) => (
+            {visibleItems.map((item) => (
                 <SideBarItem
-                    svgIcon={chevronIcon}
                     isSVG={item.isSVG}
                     isLeftIcon={item.isCommonIcon}
                     leftIconUrl={item.iconUrl}
@@ -25,6 +35,16 @@ const LeftSideBar = () => {
                     leftIconbgPosition={item.bgPosition}
                 />
             ))}
+
+            <SideBarItem
+                svgIcon={chevronIcon}
+                isLeftIcon={true}
+                isSVG={true}
+                leftIconWidth={36}
+                leftIconHeight={36}
+                label={expanded ? "See less" : "See more"}
+                onClick={() => setExpanded((v) => !v)}
+            />
         </div>
     );
 };

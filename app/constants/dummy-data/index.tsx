@@ -381,5 +381,4 @@ export const homeSideBarItems = [
     },
     { label: "Saved", isCommonIcon: false, isSVG: false, iconUrl: "/images/saved.png" },
     { label: "Video", isCommonIcon: false, isSVG: false, iconUrl: "/images/video.png" },
-    { label: "See less", isCommonIcon: true, isSVG: true },
 ];

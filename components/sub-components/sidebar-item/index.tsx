@@ -19,6 +19,8 @@ interface SideBarItemProps {
     label?: string;
     subText?: string;
     svgIcon?: React.ReactNode;
+
+    onClick?: () => void;
 }
 
 const SideBarItem = ({
@@ -36,11 +38,17 @@ const SideBarItem = ({
     rightIconHeight,
     rightIconbgPosition,
     svgIcon,
+    onClick,
 }: SideBarItemProps) => {
     const showRightIcon = !!rightIconUrl && typeof rightIconWidth !== "undefined" && typeof rightIconHeight !== "undefined";
     console.log("LeftSideBarItem", svgIcon);
     return (
-        <div className="h-[52px] px-2 flex items-center hover:bg-[var(--background-300)] rounded-[8px] cursor-pointer ">
+        <div
+            className="h-[52px] px-2 flex items-center hover:bg-[var(--background-300)] rounded-[8px] cursor-pointer"
+            onClick={onClick}
+            role={onClick ? "button" : undefined}
+            tabIndex={onClick ? 0 : undefined}
+        >
             <div className="my-2 mr-3 flex items-center">
                 {isLeftIcon ? (
                     isSVG ? (
