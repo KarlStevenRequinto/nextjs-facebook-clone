@@ -6,6 +6,7 @@ import { AccountModalProps } from "@/app/types";
 import { accountModalItems } from "@/app/constants/dummy-data";
 import CommonGenericIcon from "@/components/sub-components/icon-components/generic-icons";
 import ProfilePageItem from "@/components/sub-components/profile-page-item";
+import MiniFooter from "@/components/sub-components/mini-footer";
 
 const AccountModal = ({ isAccountOpen }: AccountModalProps) => {
     if (!isAccountOpen) return null;
@@ -68,24 +69,7 @@ const AccountModal = ({ isAccountOpen }: AccountModalProps) => {
                     );
                 })}
 
-                <div>
-                    <a>Privacy</a>
-                    <span>·</span>
-                    <a>Terms</a>
-                    <span>·</span>
-                    <a>Advertising</a>
-                    <span>·</span> <a>Ad Choices</a>
-                    <CommonGenericIcon
-                        imageUrl="https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/g7l6EV9FO6y.png"
-                        backgroundPosition="0px -929px"
-                        width="12px"
-                        height="12px"
-                    />
-                    <span>·</span> <a>Cookies</a>
-                    <span>·</span>
-                    <a>More</a>
-                    <span>·</span>Meta © 2025
-                </div>
+                <MiniFooter />
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 import { homeSideBarItems, yourShortcuts } from "@/app/constants/dummy-data";
 import Divider from "@/components/sub-components/divider";
 import CommonGenericIcon from "@/components/sub-components/icon-components/generic-icons";
+import MiniFooter from "@/components/sub-components/mini-footer";
 import SideBarItem from "@/components/sub-components/sidebar-item";
 import ChevronDownIcon from "@/public/svg/chevron-down-icon";
 import ChevronUpIcon from "@/public/svg/chevron-up-icon";
@@ -92,23 +93,7 @@ const LeftSideBar = () => {
                     onClick={() => setExpandedShortcuts((v) => !v)}
                 />
             </div>
-            <div className="absolute bottom-4 left-2 right-0 text-[var(--secondary-text)] text-[13px] leading-[13px] mt-2 px-2 flex flex-wrap items-center gap-1">
-                <a className="font-medium">Privacy</a>
-                <span>·</span>
-                <a className="font-medium">Terms</a>
-                <span>·</span>
-                <a className="font-medium">Advertising</a>
-                <span>·</span> <a className="font-medium">Ad Choices</a>
-                <CommonGenericIcon
-                    imageUrl="https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/g7l6EV9FO6y.png"
-                    backgroundPosition="0px -929px"
-                    width="12px"
-                    height="12px"
-                />
-                <span>·</span> <a className="font-medium">Cookies</a>
-                <span>·</span>
-                <a className="font-mono">More</a>
-            </div>
+            <MiniFooter miniFooterStyleProp="absolute" />
         </div>
     );
 };
