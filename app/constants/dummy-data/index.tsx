@@ -343,6 +343,7 @@ export const homeSideBarItems = [
         isSVG: false,
         iconUrl:
             "https://scontent.fceb2-1.fna.fbcdn.net/v/t39.30808-1/458566008_8748899975120715_8318957847811799003_n.jpg?stp=c0.459.1366.1366a_cp0_dst-jpg_s40x40_tt6&_nc_cat=103&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=6cXAjhKMdx8Q7kNvwFCgNza&_nc_oc=Adksjdwf8Aa3qTAw34cuL6TYq7sXIwgewiiQUAx6HdBrSKlWE2yUG8oqULM20wInV_CISjAJHCzJzGSFH9DKXxgy&_nc_zt=24&_nc_ht=scontent.fceb2-1.fna&_nc_gid=7CKDt4gZLfMPjma9-JYoHw&oh=00_AfVgu5S-_hvHf0HG4-ANeJoDiUsZzsZFyuVZxG-iFguljg&oe=689B8F24",
+        isForProfilPic: true,
     },
     { label: "Meta AI", isCommonIcon: false, isSVG: false, iconUrl: "/images/meta-ai.png" },
     { label: "Friends", isCommonIcon: false, isSVG: false, iconUrl: "/images/friends.png" },
@@ -390,6 +391,7 @@ export const yourShortcuts = [
         isSVG: false,
         iconUrl:
             "https://scontent.fceb6-4.fna.fbcdn.net/v/t39.30808-1/305573719_505673198241992_1412430142907369997_n.jpg?stp=cp0_dst-jpg_s40x40_tt6&_nc_cat=105&ccb=1-7&_nc_sid=f907e8&_nc_ohc=GdY0HZxP7YQQ7kNvwGZRDWW&_nc_oc=Adn5GqZxyd7k6CbYwHwNjm4Dbj_0H-_3QZPXRhiZKWAJl9Cvni6cMmEBfE2Nkq3-0CrMQKOU7GYEVy62LgY_km56&_nc_zt=24&_nc_ht=scontent.fceb6-4.fna&_nc_gid=TxFZEdSPa09RpTcW3YHakg&oh=00_AfUE7hi-rgWUMWTRyDT4bBodTkT6VtuCmtshBDFfSToyaA&oe=68A24F53",
+        isForProfilPic: true,
     },
     {
         label: "Lanky Nation Trading",
@@ -397,6 +399,7 @@ export const yourShortcuts = [
         isSVG: false,
         iconUrl:
             "https://scontent.fceb2-2.fna.fbcdn.net/v/t39.30808-1/334798977_759946425701003_5281059879170184110_n.jpg?stp=c109.0.414.414a_cp0_dst-jpg_s40x40_tt6&_nc_cat=110&ccb=1-7&_nc_sid=f907e8&_nc_ohc=gPtLpNrry-QQ7kNvwGXw2w_&_nc_oc=AdmT3HkQS72jyB3k1xzOY55GKidH1o3mMpeC5Mt5JFzQIoaDbr7Xq-sP-dAzxM4wHqOE_i4D3Y_aGant2J5DHZtk&_nc_zt=24&_nc_ht=scontent.fceb2-2.fna&_nc_gid=TxFZEdSPa09RpTcW3YHakg&oh=00_AfWL5dYLKZSkNGIh7-_OiBOVs3-0OMoy2jhqydKNfWp3Kw&oe=68A23FA8",
+        isForProfilPic: true,
     },
     {
         label: "East Villas Homeowners",
@@ -404,6 +407,7 @@ export const yourShortcuts = [
         isSVG: false,
         iconUrl:
             "https://scontent.fceb6-4.fna.fbcdn.net/v/t39.30808-6/363823749_158588220587535_7388400890279237494_n.jpg?stp=c592.0.696.696a_cp0_dst-jpg_s50x50_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1760b9&_nc_ohc=AOcRRzIYH8AQ7kNvwHM4oXY&_nc_oc=AdlwhJNsVNF2AeaXxqVe78RJmpHQIPr8kK5EtDiTwDB-EGDeuaCP0p1Q-hF4cYzFOO7DTTghY0XjnuPzH_hj6MVw&_nc_zt=23&_nc_ht=scontent.fceb6-4.fna&_nc_gid=TxFZEdSPa09RpTcW3YHakg&oh=00_AfXA2WvEq5R-EYrHsELdrSJkpFFwVZCZ0S5WLjGyQXIhpA&oe=68A2638B",
+        isForProfilPic: true,
     },
     {
         label: "Kilos At Gawa",
@@ -411,5 +415,6 @@ export const yourShortcuts = [
         isSVG: false,
         iconUrl:
             "https://scontent.fceb2-1.fna.fbcdn.net/v/t39.30808-1/445483226_122100851828345228_3943989227383051_n.jpg?stp=cp0_dst-jpg_s40x40_tt6&_nc_cat=103&ccb=1-7&_nc_sid=f907e8&_nc_ohc=9ruPgT_aEm0Q7kNvwFe6UOK&_nc_oc=Adl96AEs4pbPI1St4v0xIt4n-i12BkyjqVYinGZKNsMaRwu6_Pak_uSIOJecBIiBruEPxXLNo7BsTOfzT0UswXyK&_nc_zt=24&_nc_ht=scontent.fceb2-1.fna&_nc_gid=TxFZEdSPa09RpTcW3YHakg&oh=00_AfXHXSGuXi67iI36Z9f1fW3T3lWvj6KuahjIX5Om_B0Zww&oe=68A258CD",
+        isForProfilPic: true,
     },
 ];

@@ -25,7 +25,7 @@
     --card-background-100: #f8f9fb;
     --positive: #24832c;
     --gray-100: #ccd0d5;
-
+    --gray-300: #cec8c4ab
     --filter-secondary-icon: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);
 }
 
@@ -97,4 +97,9 @@ body {
 
 .chat-item-container:has(.hovering-ellipsis:hover) {
     background-color: white;
+}
+
+.profile-border {
+  @apply inline-flex items-center justify-center overflow-hidden flex-shrink-0
+         rounded-full bg-[#E2E5E9] ring-1 ring-[#cec8c4ab] transition-all duration-100 relative;
 }

@@ -35,7 +35,7 @@ const LeftSideBar = () => {
 
     return (
         <div className="pt-4 px-2 relative h-full">
-            <div className="mb-2">
+            <div className="mb-2 ">
                 {visibleItems.map((item) => (
                     <SideBarItem
                         isSVG={item.isSVG}
@@ -47,6 +47,7 @@ const LeftSideBar = () => {
                         key={item.label}
                         label={item.label}
                         leftIconbgPosition={item.bgPosition}
+                        isForProfilPic={item.isForProfilPic}
                     />
                 ))}
 
@@ -81,6 +82,7 @@ const LeftSideBar = () => {
                         leftIconHeight={36}
                         key={item.label}
                         leftIconUrl={item.iconUrl}
+                        isForProfilPic={item.isForProfilPic}
                     />
                 ))}
                 <SideBarItem

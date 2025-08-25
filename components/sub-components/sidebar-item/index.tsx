@@ -4,6 +4,7 @@ import CommonGenericIcon from "../icon-components/generic-icons";
 
 interface SideBarItemProps {
     isLeftIcon: boolean;
+    isForProfilPic?: boolean;
     isSVG?: boolean;
     leftIconbgPosition?: string;
     leftIconUrl?: string;
@@ -24,6 +25,7 @@ interface SideBarItemProps {
 }
 
 const SideBarItem = ({
+    isForProfilPic,
     isLeftIcon,
     isSVG,
     leftIconbgPosition,
@@ -63,13 +65,15 @@ const SideBarItem = ({
                 ) : (
                     leftIconUrl &&
                     leftIconAltText && (
-                        <Image
-                            src={leftIconUrl}
-                            alt={leftIconAltText}
-                            width={typeof leftIconWidth === "number" ? leftIconWidth : parseInt(leftIconWidth)}
-                            height={typeof leftIconHeight === "number" ? leftIconHeight : parseInt(leftIconHeight)}
-                            className="object-cover rounded-full"
-                        />
+                        <div className={isForProfilPic ? "profile-border" : ""}>
+                            <Image
+                                src={leftIconUrl}
+                                alt={leftIconAltText}
+                                width={typeof leftIconWidth === "number" ? leftIconWidth : parseInt(leftIconWidth)}
+                                height={typeof leftIconHeight === "number" ? leftIconHeight : parseInt(leftIconHeight)}
+                                className="object-cover rounded-full"
+                            />
+                        </div>
                     )
                 )}
             </div>

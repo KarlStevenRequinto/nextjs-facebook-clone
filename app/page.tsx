@@ -7,6 +7,7 @@ import ModalHeader from "@/components/sub-components/modal-header";
 import PostActionButton from "@/components/sub-components/post-action-button";
 import SearchItem from "@/components/sub-components/search-item";
 import SideBarItem from "@/components/sub-components/sidebar-item";
+import Image from "next/image";
 
 export default function Home() {
     return (
@@ -32,6 +33,11 @@ export default function Home() {
             <ActionButton title="ActionButton" />
             <ChatItems />
             <ModalHeader text="Modal Header" />
+
+            <div className="group w-[40px] h-[40px] profile-border">
+                {/* Profile Image */}
+                <Image src="/images/profile-pic.jpg" alt="profile picture" fill className="object-cover rounded-full" />
+            </div>
         </div>
     );
 }
